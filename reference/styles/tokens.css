@@ -1,31 +1,7 @@
-@import "tailwindcss";
-
-/* ─── Tailwind v4 theme: map Mettle CSS vars to utility classes ── */
-@theme inline {
-  --color-m-bg:           var(--m-bg);
-  --color-m-bg-sunken:    var(--m-bg-sunken);
-  --color-m-bg-raised:    var(--m-bg-raised);
-  --color-m-paper:        var(--m-paper);
-  --color-m-ink:          var(--m-ink);
-  --color-m-ink-2:        var(--m-ink-2);
-  --color-m-ink-3:        var(--m-ink-3);
-  --color-m-ink-4:        var(--m-ink-4);
-  --color-m-ink-5:        var(--m-ink-5);
-  --color-m-line:         var(--m-line);
-  --color-m-line-2:       var(--m-line-2);
-  --color-m-line-strong:  var(--m-line-strong);
-  --color-m-accent:       var(--m-accent);
-  --color-m-accent-soft:  var(--m-accent-soft);
-  --color-m-accent-deep:  var(--m-accent-deep);
-  --color-m-accent-ink:   var(--m-accent-ink);
-  --color-m-signal-pos:   var(--m-signal-pos);
-  --color-m-signal-warn:  var(--m-signal-warn);
-  --color-m-signal-stop:  var(--m-signal-stop);
-
-  --font-display: var(--m-display);
-  --font-sans:    var(--m-sans);
-  --font-mono:    var(--m-mono);
-}
+/* ─────────────────────────────────────────────────────────────
+   METTLE · Design Language tokens
+   Two themes, one type system, one motion system.
+   ───────────────────────────────────────────────────────────── */
 
 /* ─── Theme: Light (Ink) ────────────────────────────────── */
 :root,
@@ -97,15 +73,12 @@
   --m-mask-fade:   linear-gradient(180deg, rgba(11,13,16,0) 0%, var(--m-bg) 100%);
 }
 
-/* ─── Behaviour ──────────────────────────────────────────── */
-html { scroll-behavior: smooth; }
-
 /* ─── Type ───────────────────────────────────────────────── */
 :root {
   /* Type-pair A (default) */
-  --m-display: var(--font-instrument-serif), "Times New Roman", serif;
-  --m-sans:    var(--font-geist), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --m-mono:    var(--font-jetbrains-mono), ui-monospace, "SFMono-Regular", monospace;
+  --m-display: "Instrument Serif", "Times New Roman", serif;
+  --m-sans:    "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --m-mono:    "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
 
   /* Scale (display follows a refined editorial scale) */
   --t-hero:    clamp(72px, 8.5vw, 144px);
@@ -137,13 +110,39 @@ html { scroll-behavior: smooth; }
 
 /* Type-pair B: Newsreader */
 [data-mettle-type="newsreader"] {
-  --m-display: var(--font-newsreader), "Times New Roman", serif;
+  --m-display: "Newsreader", "Times New Roman", serif;
 }
 
 /* Type-pair C: DM Serif Display */
 [data-mettle-type="dm-serif"] {
-  --m-display: var(--font-dm-serif), "Times New Roman", serif;
+  --m-display: "DM Serif Display", "Times New Roman", serif;
 }
+
+/* ─── Reset within Mettle frames ──────────────────────────── */
+.mettle {
+  font-family: var(--m-sans);
+  color: var(--m-ink);
+  background: var(--m-bg);
+  font-feature-settings: "ss01" 1, "cv11" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.mettle h1, .mettle h2, .mettle h3, .mettle h4 {
+  font-family: var(--m-display);
+  font-weight: 400;
+  letter-spacing: var(--tr-tight);
+  line-height: 0.95;
+  margin: 0;
+}
+
+.mettle h1 { font-size: var(--t-h1); }
+.mettle h2 { font-size: var(--t-h2); }
+.mettle h3 { font-size: var(--t-h3); letter-spacing: var(--tr-snug); line-height: 1.05; }
+.mettle h4 { font-size: var(--t-h4); letter-spacing: var(--tr-snug); line-height: 1.15; }
+
+.mettle p, .mettle li { line-height: 1.55; margin: 0; }
 
 /* ─── Utility primitives ──────────────────────────────────── */
 .m-eyebrow {
@@ -271,6 +270,9 @@ html { scroll-behavior: smooth; }
   letter-spacing: 0.12em;
   color: var(--m-ink-4);
 }
+
+/* ─── Tweaks panel inputs (override default styles) ────────── */
+.mettle-doc { font-family: var(--m-sans); }
 
 /* ─── Operational map (signature) anim keyframes ──────────── */
 @keyframes m-flow-dash {

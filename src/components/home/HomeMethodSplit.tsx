@@ -1,0 +1,57 @@
+import Link from "next/link";
+import { Icon } from "@/components/icons";
+import type { IconName } from "@/components/icons";
+import { SectionHead } from "@/components/site/SectionHead";
+
+const PHASES: [string, IconName, string, string][] = [
+  ["01", "observe",  "Observe",  "Map how work actually moves through the business today."],
+  ["02", "simplify", "Simplify", "Strip the workflow to its load-bearing parts."],
+  ["03", "build",    "Build",    "Ship the system in focused, reversible modules."],
+  ["04", "deploy",   "Deploy",   "Launch with the team in the room — refine in the open."],
+];
+
+export function HomeMethodSplit() {
+  return (
+    <section style={{ background: "var(--m-ink)", color: "var(--m-bg)", padding: "96px 0", borderTop: "1px solid var(--m-line-strong)" }}>
+      <SectionHead
+        dark
+        kicker="The method · 4 phases"
+        title={<>Diagnose before <em style={{ fontStyle: "italic", color: "var(--m-accent)" }}>you build.</em></>}
+        lead="A repeatable four-phase method. Every Mettle engagement runs this loop. Outputs at each phase are human-readable, not engineering-only."
+        action={
+          <Link href="/how-we-work" className="m-btn m-btn-ghost" style={{ color: "var(--m-bg)", borderColor: "rgba(255,255,255,0.3)" }}>
+            Full method <Icon name="arrowRight" size={13} />
+          </Link>
+        }
+      />
+
+      <div style={{
+        margin: "0 56px", position: "relative",
+        display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0,
+        borderTop: "1px solid rgba(255,255,255,0.18)",
+      }}>
+        <div style={{ position: "absolute", left: 0, right: 0, top: 28, height: 1, background: "rgba(255,255,255,0.18)" }} />
+        {PHASES.map(([n, ic, t, d], i) => (
+          <div key={n} style={{
+            padding: "44px 24px 28px",
+            borderRight: i < 3 ? "1px solid rgba(255,255,255,0.12)" : "none",
+            position: "relative",
+          }}>
+            <span style={{
+              position: "absolute", top: 24, left: 24,
+              width: 8, height: 8, borderRadius: 999,
+              background: i === 1 ? "var(--m-accent)" : "var(--m-bg)",
+              boxShadow: i === 1 ? "0 0 0 6px rgba(111,176,136,0.18)" : "none",
+            }} />
+            <span className="m-mono" style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", letterSpacing: "0.12em" }}>PHASE {n}</span>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 14, color: "var(--m-bg)" }}>
+              <Icon name={ic} size={22} />
+              <h3 className="m-display" style={{ fontSize: 30, letterSpacing: "-0.02em" }}>{t}</h3>
+            </div>
+            <p style={{ marginTop: 14, fontSize: 14, color: "rgba(255,255,255,0.65)", lineHeight: 1.55 }}>{d}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
