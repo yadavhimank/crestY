@@ -14,7 +14,7 @@ export function SiteFrame({ children }: { children: ReactNode }) {
         background: "var(--m-bg)",
       }}
     >
-      <div style={{ minWidth: 1240 }}>
+      <div>
         <SiteNav />
         <main>{children}</main>
         <SiteFooter />

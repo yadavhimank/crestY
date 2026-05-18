@@ -51,7 +51,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
       />
 
       {/* Header */}
-      <section style={{ padding: "84px 56px 64px", position: "relative" }}>
+      <section className="px-5 py-12 md:px-8 md:py-16 lg:px-14 lg:pt-21 lg:pb-16" style={{ position: "relative" }}>
         <HeroBackdrop />
         <div style={{ position: "relative" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 24 }}>
@@ -66,10 +66,10 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
               {cs.sector}
             </span>
           </div>
-          <h1 className="m-display" style={{ fontSize: 80, letterSpacing: "-0.04em", lineHeight: 0.92, maxWidth: 960 }}>
+          <h1 className="m-display text-[36px] sm:text-[52px] md:text-[64px] lg:text-[80px]" style={{ letterSpacing: "-0.04em", lineHeight: 0.92, maxWidth: 960 }}>
             {cs.headline}
           </h1>
-          <p style={{ marginTop: 24, fontSize: 20, color: "var(--m-ink-2)", lineHeight: 1.5, maxWidth: 640 }}>
+          <p className="text-[15px] lg:text-[20px]" style={{ marginTop: 24, color: "var(--m-ink-2)", lineHeight: 1.5, maxWidth: 640 }}>
             {cs.subheadline}
           </p>
           <div style={{ marginTop: 32, display: "flex", gap: 32 }}>
@@ -91,7 +91,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
 
       {/* Stats */}
       <section style={{ borderTop: "1px solid var(--m-line-strong)", borderBottom: "1px solid var(--m-line)", background: "var(--m-bg-raised)" }}>
-        <div style={{ display: "grid", gridTemplateColumns: `repeat(${cs.stats.length}, 1fr)` }}>
+        <div style={{ display: "grid", gridTemplateColumns: `repeat(auto-fit, minmax(180px, 1fr))` }}>
           {cs.stats.map((s, i) => (
             <div
               key={s.label}
@@ -112,19 +112,19 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
       </section>
 
       {/* Body */}
-      <section style={{ padding: "80px 56px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80 }}>
+      <section className="px-5 py-12 md:px-8 md:py-16 lg:px-14 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-start">
         <div style={{ display: "flex", flexDirection: "column", gap: 48 }}>
           <div>
             <span className="m-eyebrow">The problem</span>
-            <p style={{ marginTop: 16, fontSize: 17, color: "var(--m-ink-2)", lineHeight: 1.7 }}>{cs.problem}</p>
+            <p className="text-[15px] lg:text-[17px]" style={{ marginTop: 16, color: "var(--m-ink-2)", lineHeight: 1.7 }}>{cs.problem}</p>
           </div>
           <div>
             <span className="m-eyebrow">Our approach</span>
-            <p style={{ marginTop: 16, fontSize: 17, color: "var(--m-ink-2)", lineHeight: 1.7 }}>{cs.approach}</p>
+            <p className="text-[15px] lg:text-[17px]" style={{ marginTop: 16, color: "var(--m-ink-2)", lineHeight: 1.7 }}>{cs.approach}</p>
           </div>
           <div>
             <span className="m-eyebrow">The outcome</span>
-            <p style={{ marginTop: 16, fontSize: 17, color: "var(--m-ink-2)", lineHeight: 1.7 }}>{cs.outcome}</p>
+            <p className="text-[15px] lg:text-[17px]" style={{ marginTop: 16, color: "var(--m-ink-2)", lineHeight: 1.7 }}>{cs.outcome}</p>
           </div>
         </div>
         <div style={{ paddingTop: 8 }}>
@@ -159,7 +159,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
       </section>
 
       {/* Prev / Next */}
-      <section style={{ borderTop: "1px solid var(--m-line)", display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+      <section className="grid grid-cols-2" style={{ borderTop: "1px solid var(--m-line)" }}>
         {prev ? (
           <Link
             href={`/work/${prev.slug}`}

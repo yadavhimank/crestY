@@ -205,8 +205,8 @@ function CaseCard({ c }: { c: WorkCase }) {
 
 export function WorkIndex() {
   return (
-    <section style={{ padding: "48px 0 80px" }}>
-      <div style={{ margin: "0 56px", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+    <section className="py-12 md:py-16 lg:py-20">
+      <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {WORK_CASES.map((c) => <CaseCard key={c.id} c={c} />)}
       </div>
     </section>

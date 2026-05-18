@@ -23,7 +23,7 @@ export default function GlobalError({
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          padding: "96px 56px",
+          padding: "96px 20px",
           textAlign: "center",
         }}>
           <span style={{ fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase", color: "#80868F", fontFamily: "ui-monospace, monospace" }}>

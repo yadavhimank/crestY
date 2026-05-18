@@ -4,13 +4,12 @@ import { SiteFrame } from "@/components/site/SiteFrame";
 export default function NotFound() {
   return (
     <SiteFrame>
-      <section style={{
+      <section className="px-5 py-24 md:px-8 lg:px-14" style={{
         minHeight: "70vh",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        padding: "96px 56px",
         textAlign: "center",
         position: "relative",
       }}>

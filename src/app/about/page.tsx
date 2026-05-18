@@ -54,11 +54,11 @@ export default function AboutPage() {
   return (
     <SiteFrame>
       {/* Hero */}
-      <section style={{ padding: "84px 56px 56px", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "start", position: "relative" }}>
+      <section className="px-5 py-12 md:px-8 md:py-16 lg:px-14 lg:py-20 grid grid-cols-1 md:grid-cols-[1.05fr_0.95fr] gap-14 items-start" style={{ position: "relative" }}>
         <HeroBackdrop />
         <div style={{ position: "relative" }}>
           <span className="m-eyebrow">About · The studio</span>
-          <h1 className="m-display" style={{ fontSize: 108, letterSpacing: "-0.045em", lineHeight: 0.9, marginTop: 22 }}>
+          <h1 className="m-display text-[44px] sm:text-[64px] md:text-[88px] lg:text-[108px] xl:text-[124px]" style={{ letterSpacing: "-0.045em", lineHeight: 0.9, marginTop: 22 }}>
             A small studio<br />
             of operators,<br />
             engineers, and<br />
@@ -66,7 +66,7 @@ export default function AboutPage() {
           </h1>
         </div>
         <div style={{ position: "relative", paddingTop: 80, display: "flex", flexDirection: "column", gap: 22 }}>
-          <p style={{ fontSize: 20, color: "var(--m-ink)", lineHeight: 1.55, maxWidth: 460 }}>
+          <p className="text-[15px] lg:text-[20px]" style={{ color: "var(--m-ink)", lineHeight: 1.55, maxWidth: 460 }}>
             Mettle started in 2023 with a stubborn premise:{" "}
             <em style={{ fontStyle: "italic" }}>most business problems are operating problems wearing a software costume.</em>
           </p>
@@ -83,7 +83,7 @@ export default function AboutPage() {
       </section>
 
       {/* Numbers */}
-      <section style={{ borderTop: "1px solid var(--m-line-strong)", borderBottom: "1px solid var(--m-line)", padding: "32px 56px", display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 24, background: "var(--m-bg-raised)" }}>
+      <section className="px-5 py-8 md:px-8 lg:px-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6" style={{ borderTop: "1px solid var(--m-line-strong)", borderBottom: "1px solid var(--m-line)", background: "var(--m-bg-raised)" }}>
         {([
           ["2023", "Founded · Singapore",    "clock"],
           ["4",    "Industries shipped",     "grid"],
@@ -93,22 +93,22 @@ export default function AboutPage() {
         ] as [string, string, IconName][]).map(([n, l, ic]) => (
           <div key={l} style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             <div style={{ color: "var(--m-ink-4)" }}><Icon name={ic} size={18} /></div>
-            <div className="m-display" style={{ fontSize: 52, letterSpacing: "-0.03em", lineHeight: 1 }}>{n}</div>
+            <div className="m-display text-[32px] md:text-[44px] lg:text-[52px]" style={{ letterSpacing: "-0.03em", lineHeight: 1 }}>{n}</div>
             <div className="m-mono" style={{ fontSize: 11, color: "var(--m-ink-3)", letterSpacing: "0.06em", textTransform: "uppercase" }}>{l}</div>
           </div>
         ))}
       </section>
 
       {/* Origin */}
-      <section style={{ padding: "96px 56px", borderTop: "1px solid var(--m-line)" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 80 }}>
+      <section className="px-5 py-16 md:px-8 md:py-20 lg:px-14 lg:py-24" style={{ borderTop: "1px solid var(--m-line)" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-20">
           <div>
             <span className="m-eyebrow">Origin · 2023 → today</span>
-            <h2 className="m-display" style={{ fontSize: 60, letterSpacing: "-0.03em", lineHeight: 0.95, marginTop: 18 }}>
+            <h2 className="m-display text-[28px] sm:text-[36px] md:text-[44px] lg:text-[56px]" style={{ letterSpacing: "-0.03em", lineHeight: 0.95, marginTop: 18 }}>
               We started where most consultancies <em style={{ fontStyle: "italic", color: "var(--m-accent)" }}>stop.</em>
             </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <p style={{ fontSize: 15, color: "var(--m-ink-2)", lineHeight: 1.7 }}>
               Three of us came from product, engineering and operations roles where the strategy decks were
               beautiful and the systems were broken. We kept watching teams hire a McKinsey for the diagnosis
@@ -126,7 +126,7 @@ export default function AboutPage() {
           <span className="m-eyebrow">Timeline</span>
           <div style={{ marginTop: 32, position: "relative" }}>
             <div style={{ position: "absolute", left: 0, right: 0, top: 16, height: 1, background: "var(--m-line)" }} />
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 16 }}>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {([
                 ["Q1 '23", "compass",  "Founded · Singapore"],
                 ["Q3 '23", "build",    "First system shipped"],
@@ -155,13 +155,13 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section style={{ padding: "96px 0", borderTop: "1px solid var(--m-line)" }}>
+      <section className="py-16 md:py-20 lg:py-24" style={{ borderTop: "1px solid var(--m-line)" }}>
         <SectionHead
           kicker="The team · Four operators"
           title={<>People who&apos;ve <em style={{ fontStyle: "italic" }}>run</em> the kind of system we&rsquo;ll build for you.</>}
           action={<span className="m-mono" style={{ fontSize: 11, color: "var(--m-ink-4)" }}>plus 3 collaborators · 2 advisors</span>}
         />
-        <div style={{ margin: "0 56px", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 18 }}>
+        <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-2 lg:grid-cols-4 gap-4">
           {TEAM.map((m) => (
             <article key={m.name} style={{ border: "1px solid var(--m-line)", padding: 18, background: "var(--m-bg-raised)", display: "flex", flexDirection: "column", gap: 16 }}>
               <div style={{ aspectRatio: "4 / 5", background: "var(--m-bg-sunken)", position: "relative", overflow: "hidden", border: "1px solid var(--m-line)" }}>
@@ -170,10 +170,10 @@ export default function AboutPage() {
                   backgroundImage: "repeating-linear-gradient(135deg, transparent 0, transparent 6px, var(--m-line) 6px, var(--m-line) 7px)",
                   opacity: 0.5,
                 }} />
-                <div className="m-display" style={{
+                <div className="m-display text-[48px] lg:text-[96px]" style={{
                   position: "absolute", inset: 0,
                   display: "flex", alignItems: "center", justifyContent: "center",
-                  fontSize: 96, color: "var(--m-ink-4)", letterSpacing: "-0.04em",
+                  color: "var(--m-ink-4)", letterSpacing: "-0.04em",
                 }}>{m.initials}</div>
                 <div style={{ position: "absolute", top: 10, left: 10, display: "flex", alignItems: "center", gap: 6, color: "var(--m-ink-3)" }}>
                   <Icon name={m.icon} size={14} />
@@ -184,7 +184,7 @@ export default function AboutPage() {
               <div>
                 <div className="m-display" style={{ fontSize: 22, letterSpacing: "-0.015em" }}>{m.name}</div>
                 <div className="m-mono" style={{ fontSize: 11, color: "var(--m-ink-3)", marginTop: 4, letterSpacing: "0.06em", textTransform: "uppercase" }}>{m.role}</div>
-                <p style={{ fontSize: 13, color: "var(--m-ink-2)", marginTop: 10, lineHeight: 1.5 }}>{m.bio}</p>
+                <p style={{ fontSize: 14, color: "var(--m-ink-2)", marginTop: 10, lineHeight: 1.5 }}>{m.bio}</p>
               </div>
             </article>
           ))}
@@ -192,12 +192,12 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section style={{ background: "var(--m-bg-sunken)", padding: "96px 0", borderTop: "1px solid var(--m-line)" }}>
+      <section className="py-16 md:py-20 lg:py-24" style={{ background: "var(--m-bg-sunken)", borderTop: "1px solid var(--m-line)" }}>
         <SectionHead
           kicker="Values · The studio's working code"
           title={<>Four habits we&rsquo;d rather <em style={{ fontStyle: "italic" }}>not break.</em></>}
         />
-        <div style={{ margin: "0 56px", display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 0, borderTop: "1px solid var(--m-line)", borderLeft: "1px solid var(--m-line)" }}>
+        <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-1 md:grid-cols-2" style={{ borderTop: "1px solid var(--m-line)", borderLeft: "1px solid var(--m-line)" }}>
           {VALUES.map(([ic, t, d], i) => (
             <div key={t} style={{
               padding: "36px 32px",
@@ -211,7 +211,7 @@ export default function AboutPage() {
                 <Icon name={ic} size={32} />
               </div>
               <div>
-                <h3 className="m-display" style={{ fontSize: 32, letterSpacing: "-0.02em", lineHeight: 1.05 }}>{t}</h3>
+                <h3 className="m-display text-xl md:text-2xl lg:text-3xl" style={{ letterSpacing: "-0.02em", lineHeight: 1.05 }}>{t}</h3>
                 <p style={{ marginTop: 14, fontSize: 15, color: "var(--m-ink-2)", lineHeight: 1.65, maxWidth: 460 }}>{d}</p>
               </div>
             </div>
@@ -220,9 +220,9 @@ export default function AboutPage() {
       </section>
 
       {/* Clients */}
-      <section style={{ padding: "72px 0", borderTop: "1px solid var(--m-line)" }}>
+      <section className="py-16 md:py-20 lg:py-24" style={{ borderTop: "1px solid var(--m-line)" }}>
         <SectionHead kicker="Operating partners · selected" title={<>People who&rsquo;ve <em style={{ fontStyle: "italic" }}>handed</em> us the keys.</>} />
-        <div style={{ margin: "0 56px", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0, borderTop: "1px solid var(--m-line)", borderLeft: "1px solid var(--m-line)" }}>
+        <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-2 md:grid-cols-4" style={{ borderTop: "1px solid var(--m-line)", borderLeft: "1px solid var(--m-line)" }}>
           {CLIENTS.map(([n, ic]) => (
             <div key={n} style={{
               padding: "28px 24px",
@@ -239,14 +239,14 @@ export default function AboutPage() {
       </section>
 
       {/* Careers */}
-      <section style={{ padding: "96px 0", borderTop: "1px solid var(--m-line)" }}>
+      <section className="py-16 md:py-20 lg:py-24" style={{ borderTop: "1px solid var(--m-line)" }}>
         <SectionHead
           kicker="Open roles · 2"
           title={<>We hire <em style={{ fontStyle: "italic" }}>slowly</em>, and rarely.</>}
           lead="If the way we work resonates, the door is open. No throwaway recruiter screens — every conversation is with a partner."
           action={<button className="m-btn m-btn-bare">All openings <Icon name="arrowRight" size={13} /></button>}
         />
-        <div style={{ margin: "0 56px", display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 16 }}>
+        <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-1 md:grid-cols-2 gap-4">
           {ROLES.map((r) => (
             <article key={r.t} style={{ border: "1px solid var(--m-line)", padding: 28, background: "var(--m-bg-raised)", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 24 }}>
               <div style={{ display: "flex", gap: 20, alignItems: "center" }}>

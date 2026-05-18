@@ -55,7 +55,7 @@ function EngagementCard({ t }: { t: Tier }) {
         <span className="m-mono" style={{ fontSize: 11, color: t.featured ? "rgba(255,255,255,0.5)" : "var(--m-ink-4)", letterSpacing: "0.08em", textTransform: "uppercase" }}>{t.tag}</span>
         <Icon name={t.icon} size={22} />
       </div>
-      <h3 className="m-display" style={{ fontSize: 38, letterSpacing: "-0.025em", lineHeight: 1 }}>{t.title}</h3>
+      <h3 className="m-display text-xl md:text-2xl lg:text-3xl" style={{ letterSpacing: "-0.025em", lineHeight: 1 }}>{t.title}</h3>
       <div style={{ display: "flex", gap: 14, paddingBottom: 18, borderBottom: "1px solid " + (t.featured ? "rgba(255,255,255,0.18)" : "var(--m-line)") }}>
         {t.price.map((p, i) => (
           <span key={i} className="m-mono" style={{
@@ -93,13 +93,13 @@ function EngagementCard({ t }: { t: Tier }) {
 
 export function ServicesEngagement() {
   return (
-    <section style={{ padding: "96px 0", borderTop: "1px solid var(--m-line)" }}>
+    <section className="py-16 md:py-20 lg:py-24" style={{ borderTop: "1px solid var(--m-line)" }}>
       <SectionHead
         kicker="Engagement model · three sizes"
         title={<>Start small. <em style={{ fontStyle: "italic" }}>Earn</em> the next step.</>}
         lead="Three engagement sizes, each priced and scoped before we begin. No open-ended retainers."
       />
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, margin: "0 56px" }}>
+      <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {TIERS.map((t) => <EngagementCard key={t.title} t={t} />)}
       </div>
     </section>

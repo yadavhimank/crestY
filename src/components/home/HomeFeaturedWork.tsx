@@ -37,7 +37,7 @@ const CASES: CaseData[] = [
 
 export function HomeFeaturedWork() {
   return (
-    <section style={{ padding: "80px 0", borderTop: "1px solid var(--m-line)" }}>
+    <section className="py-12 md:py-16 lg:py-20" style={{ borderTop: "1px solid var(--m-line)" }}>
       <SectionHead
         kicker="Featured work · 03 of 06 live systems"
         title={<>Shipped systems, <em style={{ fontStyle: "italic", color: "var(--m-accent)" }}>not</em> decks.</>}
@@ -49,7 +49,7 @@ export function HomeFeaturedWork() {
         }
       />
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, margin: "0 56px" }}>
+      <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {CASES.map((c) => <FeaturedCaseCard key={c.n} {...c} />)}
       </div>
     </section>

@@ -31,12 +31,12 @@ const QUOTES: Quote[] = [
 
 export function HomeTestimonials() {
   return (
-    <section style={{ padding: "96px 0", borderTop: "1px solid var(--m-line)" }}>
+    <section className="py-16 md:py-20 lg:py-24" style={{ borderTop: "1px solid var(--m-line)" }}>
       <SectionHead
         kicker="What partners say"
         title={<>Trusted by the people who <em style={{ fontStyle: "italic" }}>run things.</em></>}
       />
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, margin: "0 56px" }}>
+      <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {QUOTES.map((q) => (
           <figure key={q.name} style={{ margin: 0, border: "1px solid var(--m-line)", background: "var(--m-bg-raised)", padding: 28, display: "flex", flexDirection: "column", gap: 24 }}>
             <span style={{ color: "var(--m-accent)" }}><Icon name="spark" size={24} /></span>

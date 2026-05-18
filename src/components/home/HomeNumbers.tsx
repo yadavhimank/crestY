@@ -10,9 +10,9 @@ const STATS: [string, string, IconName][] = [
 
 export function HomeNumbers() {
   return (
-    <section style={{ background: "var(--m-bg-sunken)", padding: "80px 56px", borderTop: "1px solid var(--m-line)" }}>
-      <div style={{ display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 64, alignItems: "end", marginBottom: 56 }}>
-        <h2 className="m-display" style={{ fontSize: 72, letterSpacing: "-0.035em", lineHeight: 0.95 }}>
+    <section className="px-5 py-12 md:px-8 md:py-16 lg:px-14 lg:py-20" style={{ background: "var(--m-bg-sunken)", borderTop: "1px solid var(--m-line)" }}>
+      <div className="grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-8 md:gap-16 items-end mb-8 md:mb-14">
+        <h2 className="m-display text-[32px] sm:text-[44px] md:text-[56px] lg:text-[72px]" style={{ letterSpacing: "-0.035em", lineHeight: 0.95 }}>
           Numbers we
           <em style={{ fontStyle: "italic", color: "var(--m-accent)" }}> stand behind.</em>
         </h2>
@@ -20,11 +20,11 @@ export function HomeNumbers() {
           Reported by clients, measured the quarter after launch. No projections, no &lsquo;up to&rsquo;.
         </p>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32, borderTop: "1px solid var(--m-line-strong)", paddingTop: 32 }}>
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-8" style={{ borderTop: "1px solid var(--m-line-strong)" }}>
         {STATS.map(([n, l, ic]) => (
           <div key={l}>
             <div style={{ color: "var(--m-ink-4)", marginBottom: 18 }}><Icon name={ic} size={20} /></div>
-            <div className="m-display" style={{ fontSize: 64, letterSpacing: "-0.035em", lineHeight: 0.95 }}>{n}</div>
+            <div className="m-display text-[32px] sm:text-[44px] lg:text-[64px]" style={{ letterSpacing: "-0.035em", lineHeight: 0.95 }}>{n}</div>
             <div className="m-mono" style={{ fontSize: 11, color: "var(--m-ink-3)", marginTop: 10, letterSpacing: "0.06em", textTransform: "uppercase" }}>{l}</div>
           </div>
         ))}

@@ -1,17 +1,17 @@
 export function WorkHeader() {
   return (
-    <section style={{ padding: "84px 56px 32px", position: "relative" }}>
-      <div style={{ display: "grid", gridTemplateColumns: "1.15fr 0.85fr", gap: 64, alignItems: "end" }}>
+    <section className="px-5 py-12 md:px-8 md:py-16 lg:px-14 lg:py-20" style={{ position: "relative" }}>
+      <div className="grid grid-cols-1 md:grid-cols-[1.15fr_0.85fr] gap-8 md:gap-16 items-end">
         <div>
           <span className="m-eyebrow">Work · Six live systems</span>
-          <h1 className="m-display" style={{ fontSize: 108, letterSpacing: "-0.045em", lineHeight: 0.9, marginTop: 22 }}>
+          <h1 className="m-display text-[44px] sm:text-[64px] md:text-[88px] lg:text-[108px] xl:text-[124px]" style={{ letterSpacing: "-0.045em", lineHeight: 0.9, marginTop: 22 }}>
             Systems we&apos;ve<br />
             <em style={{ fontStyle: "italic", color: "var(--m-accent)" }}>shipped</em>, not<br />
             slides we&apos;ve drawn.
           </h1>
         </div>
         <div style={{ paddingBottom: 12 }}>
-          <p style={{ fontSize: 17, color: "var(--m-ink-2)", lineHeight: 1.6, maxWidth: 440 }}>
+          <p className="text-[15px] lg:text-[17px]" style={{ color: "var(--m-ink-2)", lineHeight: 1.6, maxWidth: 440 }}>
             Six engagements across four industries. Each one is a working operating system —
             owned by the team that runs it.
           </p>

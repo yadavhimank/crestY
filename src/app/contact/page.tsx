@@ -34,18 +34,18 @@ const REASSURANCE: [IconName, string, string][] = [
 export default function ContactPage() {
   return (
     <SiteFrame>
-      <section style={{ display: "grid", gridTemplateColumns: "1.05fr 1fr", borderBottom: "1px solid var(--m-line-strong)" }}>
+      <section className="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr]" style={{ borderBottom: "1px solid var(--m-line-strong)" }}>
         {/* Left — editorial */}
-        <div style={{ padding: "84px 56px 64px", borderRight: "1px solid var(--m-line)", position: "relative", overflow: "hidden" }}>
+        <div className="px-5 py-12 md:px-8 md:py-16 lg:px-14 lg:py-20 lg:border-r" style={{ borderColor: "var(--m-line)", position: "relative", overflow: "hidden" }}>
           <HeroBackdrop />
           <div style={{ position: "relative" }}>
             <span className="m-eyebrow">Contact · Start a conversation</span>
-            <h1 className="m-display" style={{ fontSize: 96, letterSpacing: "-0.04em", lineHeight: 0.92, marginTop: 22 }}>
+            <h1 className="m-display text-[40px] sm:text-[56px] md:text-[72px] lg:text-[96px]" style={{ letterSpacing: "-0.04em", lineHeight: 0.92, marginTop: 22 }}>
               Tell us what&apos;s<br />
               <em style={{ fontStyle: "italic", color: "var(--m-accent)" }}>operationally</em><br />
               broken.
             </h1>
-            <p style={{ marginTop: 24, fontSize: 17, color: "var(--m-ink-2)", lineHeight: 1.6, maxWidth: 480 }}>
+            <p className="text-[15px] lg:text-[17px]" style={{ marginTop: 24, color: "var(--m-ink-2)", lineHeight: 1.6, maxWidth: 480 }}>
               We don&apos;t start with proposals or pitches. We start with understanding
               your situation — then figure out together if and how we can help.
             </p>
@@ -85,19 +85,19 @@ export default function ContactPage() {
         </div>
 
         {/* Right — form */}
-        <div style={{ padding: "84px 56px 64px", background: "var(--m-bg-raised)" }}>
+        <div className="px-5 py-12 md:px-8 md:py-16 lg:px-14 lg:py-20" style={{ background: "var(--m-bg-raised)" }}>
           <ContactForm />
         </div>
       </section>
 
       {/* Reassurance */}
-      <section style={{ padding: "96px 0", borderTop: "1px solid var(--m-line)" }}>
+      <section className="py-16 md:py-20 lg:py-24" style={{ borderTop: "1px solid var(--m-line)" }}>
         <SectionHead
           kicker="Reassurance · For first conversations"
           title={<>What we <em style={{ fontStyle: "italic" }}>won&rsquo;t</em> do with your note.</>}
           lead="Sending a contact form to a consultancy can feel like signing up for a mailing list. Here's the floor we hold ourselves to."
         />
-        <div style={{ margin: "0 56px", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
+        <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {REASSURANCE.map(([ic, t, d]) => (
             <article key={t} style={{ border: "1px solid var(--m-line)", padding: 28, background: "var(--m-bg-raised)", display: "flex", flexDirection: "column", gap: 14, minHeight: 180 }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>

@@ -13,16 +13,17 @@ const SECTORS: [IconName, string][] = [
 
 export function WorkSectors() {
   return (
-    <section style={{ padding: "72px 0", borderTop: "1px solid var(--m-line)" }}>
+    <section className="py-16 md:py-20 lg:py-24" style={{ borderTop: "1px solid var(--m-line)" }}>
       <SectionHead
         kicker="Sectors · Where we work"
         title={<>Four industries. <em style={{ fontStyle: "italic" }}>One method.</em></>}
       />
-      <div style={{ margin: "0 56px", display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 0, borderTop: "1px solid var(--m-line)", borderBottom: "1px solid var(--m-line)" }}>
+      <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6" style={{ borderTop: "1px solid var(--m-line)", borderLeft: "1px solid var(--m-line)" }}>
         {SECTORS.map(([ic, n], i) => (
           <div key={n} style={{
             padding: "28px 18px",
-            borderRight: i < SECTORS.length - 1 ? "1px solid var(--m-line)" : "none",
+            borderRight: "1px solid var(--m-line)",
+            borderBottom: "1px solid var(--m-line)",
             display: "flex", flexDirection: "column", gap: 12,
           }}>
             <Icon name={ic} size={22} />

@@ -31,10 +31,8 @@ export function HomeServicesStrip() {
         }
       />
 
-      <div style={{
-        display: "grid", gridTemplateColumns: "repeat(3, 1fr)",
-        margin: "0 56px",
-        borderTop: "1px solid var(--m-line)", borderBottom: "1px solid var(--m-line)",
+      <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{
+        borderTop: "1px solid var(--m-line)", borderLeft: "1px solid var(--m-line)",
       }}>
         {SERVICES.map((s, i) => (
           <Link
@@ -42,7 +40,8 @@ export function HomeServicesStrip() {
             href="/services"
             style={{
               padding: "32px 28px",
-              borderRight: i < 2 ? "1px solid var(--m-line)" : "none",
+              borderRight: "1px solid var(--m-line)",
+              borderBottom: "1px solid var(--m-line)",
               display: "flex", flexDirection: "column", gap: 16,
               cursor: "pointer",
               transition: "background 140ms var(--ease-out-fine)",
@@ -54,7 +53,7 @@ export function HomeServicesStrip() {
               <span className="m-mono" style={{ fontSize: 11, color: "var(--m-ink-4)" }}>{s.n} / 03</span>
               <Icon name={s.ic} size={28} />
             </div>
-            <h3 className="m-display" style={{ fontSize: 32, letterSpacing: "-0.02em", lineHeight: 1.05 }}>{s.t}</h3>
+            <h3 className="m-display text-xl md:text-2xl lg:text-3xl" style={{ letterSpacing: "-0.02em", lineHeight: 1.05 }}>{s.t}</h3>
             <p style={{ fontSize: 14, color: "var(--m-ink-2)", lineHeight: 1.55, maxWidth: 320 }}>{s.d}</p>
             <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 8 }}>
               {s.tags.map((t) => <span key={t} className="m-tag">{t}</span>)}

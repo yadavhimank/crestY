@@ -17,7 +17,7 @@ export function ContactForm() {
         <div className="m-mono" style={{ fontSize: 11, color: "var(--m-ink-4)", letterSpacing: "0.08em" }}>FORM · A · v3</div>
         <span className="m-mono" style={{ fontSize: 11, color: "var(--m-accent)" }}>● 5 fields · 2 min</span>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <MInput label="Name" placeholder="Your name" />
         <MInput label="Company" placeholder="Where you work" />
       </div>
@@ -43,15 +43,16 @@ export function ContactForm() {
       </div>
       <div>
         <div className="m-eyebrow" style={{ marginBottom: 10 }}>Rough budget · indicative only</div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", border: "1px solid var(--m-line)" }}>
-          {BUDGETS.map((b, i) => (
+        <div className="grid grid-cols-2 md:grid-cols-4" style={{ borderTop: "1px solid var(--m-line)", borderLeft: "1px solid var(--m-line)" }}>
+          {BUDGETS.map((b) => (
             <button key={b} type="button" onClick={() => setBudget(b)} style={{
-              padding: "12px 8px",
+              padding: "12px 8px", minHeight: 44,
               background: budget === b ? "var(--m-ink)" : "transparent",
               color: budget === b ? "var(--m-bg)" : "var(--m-ink-2)",
               fontFamily: "var(--m-mono)", fontSize: 11, letterSpacing: "0.08em",
-              cursor: "pointer", border: 0,
-              borderRight: i < BUDGETS.length - 1 ? "1px solid var(--m-line)" : "0",
+              cursor: "pointer",
+              borderRight: "1px solid var(--m-line)",
+              borderBottom: "1px solid var(--m-line)",
             }}>{b}</button>
           ))}
         </div>

@@ -230,15 +230,15 @@ export default function HowWeWorkPage() {
   return (
     <SiteFrame>
       {/* Header */}
-      <section style={{ padding: "84px 56px 32px", position: "relative" }}>
+      <section className="px-5 py-12 md:px-8 md:py-16 lg:px-14 lg:pt-21 lg:pb-8" style={{ position: "relative" }}>
         <HeroBackdrop />
         <div style={{ position: "relative" }}>
           <span className="m-eyebrow">How we work · Four phases · One method</span>
-          <h1 className="m-display" style={{ fontSize: 96, letterSpacing: "-0.04em", lineHeight: 0.92, maxWidth: 1100, marginTop: 22 }}>
+          <h1 className="m-display text-[40px] sm:text-[56px] md:text-[72px] lg:text-[96px]" style={{ letterSpacing: "-0.04em", lineHeight: 0.92, maxWidth: 1100, marginTop: 22 }}>
             Diagnose before you build.<br />
             <em style={{ fontStyle: "italic", color: "var(--m-accent)" }}>Build</em> like the system <em style={{ fontStyle: "italic" }}>has to last.</em>
           </h1>
-          <p style={{ marginTop: 24, fontSize: 18, color: "var(--m-ink-2)", lineHeight: 1.6, maxWidth: 640 }}>
+          <p className="text-[15px] lg:text-[18px]" style={{ marginTop: 24, color: "var(--m-ink-2)", lineHeight: 1.6, maxWidth: 640 }}>
             The Mettle method is four phases run as a loop. Each phase has a defined output that
             the team that owns the business — not just the team that builds the system — can read and approve.
           </p>
@@ -246,9 +246,9 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* Rail */}
-      <section style={{ padding: "0 56px 32px", position: "relative" }}>
+      <section className="px-5 pb-8 md:px-8 lg:px-14" style={{ position: "relative" }}>
         <div style={{ position: "relative", borderTop: "1px solid var(--m-line-strong)", paddingTop: 32 }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {PHASES.map((p, i) => (
               <a key={p.n}
                 href={`#phase-${p.n}`}
@@ -261,7 +261,7 @@ export default function HowWeWorkPage() {
                 <div className="m-mono" style={{ fontSize: 11, color: "var(--m-ink-4)", letterSpacing: "0.1em" }}>PHASE {p.n}</div>
                 <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 8 }}>
                   <Icon name={p.icon} size={26} />
-                  <h3 className="m-display" style={{ fontSize: 36, letterSpacing: "-0.02em" }}>{p.t}</h3>
+                  <h3 className="m-display text-xl md:text-2xl lg:text-3xl" style={{ letterSpacing: "-0.02em" }}>{p.t}</h3>
                 </div>
                 <p style={{ marginTop: 12, fontSize: 14, color: "var(--m-ink-2)", lineHeight: 1.55 }}>{p.d}</p>
                 <div style={{ marginTop: 18, paddingTop: 14, borderTop: "1px solid var(--m-line)" }}>
@@ -277,11 +277,9 @@ export default function HowWeWorkPage() {
       {/* Phase details */}
       <section style={{ borderTop: "1px solid var(--m-line)" }}>
         {PHASES.map((p, i) => (
-          <article key={p.n} id={`phase-${p.n}`} style={{
-            padding: "80px 56px",
+          <article key={p.n} id={`phase-${p.n}`} className="px-5 py-12 md:px-8 md:py-16 lg:px-14 lg:py-20 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-16 items-center" style={{
             borderBottom: "1px solid var(--m-line)",
             background: i % 2 === 0 ? "var(--m-bg)" : "var(--m-bg-raised)",
-            display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 64, alignItems: "center",
           }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 24 }}>
@@ -291,10 +289,10 @@ export default function HowWeWorkPage() {
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 22 }}>
                 <Icon name={p.icon} size={42} />
-                <h2 className="m-display" style={{ fontSize: 80, letterSpacing: "-0.04em", lineHeight: 0.9 }}>{p.t}</h2>
+                <h2 className="m-display text-[36px] sm:text-[52px] md:text-[64px] lg:text-[80px]" style={{ letterSpacing: "-0.04em", lineHeight: 0.9 }}>{p.t}</h2>
               </div>
-              <p style={{ fontSize: 18, color: "var(--m-ink-2)", lineHeight: 1.6, maxWidth: 480, marginBottom: 28 }}>{p.body}</p>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
+              <p className="text-[15px] lg:text-[18px]" style={{ color: "var(--m-ink-2)", lineHeight: 1.6, maxWidth: 480, marginBottom: 28 }}>{p.body}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <span className="m-eyebrow">Output</span>
                   <div className="m-display" style={{ fontSize: 22, marginTop: 8, letterSpacing: "-0.015em", lineHeight: 1.2 }}>{p.out}</div>
@@ -318,13 +316,13 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* Artefacts */}
-      <section style={{ background: "var(--m-bg-sunken)", padding: "96px 0", borderTop: "1px solid var(--m-line)" }}>
+      <section className="py-16 md:py-20 lg:py-24" style={{ background: "var(--m-bg-sunken)", borderTop: "1px solid var(--m-line)" }}>
         <SectionHead
           kicker="Artefacts · What every engagement produces"
           title={<>Things a non-engineer can <em style={{ fontStyle: "italic" }}>read.</em></>}
           lead="We don't hide work behind jargon. Every artefact is written for the team that runs the business — not just the team that built it."
         />
-        <div style={{ margin: "0 56px", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
+        <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {ARTEFACTS.map(([ic, t, d]) => (
             <article key={t} style={{ background: "var(--m-bg-raised)", border: "1px solid var(--m-line)", padding: 28, display: "flex", flexDirection: "column", gap: 14, minHeight: 200 }}>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -339,15 +337,15 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* Toolkit */}
-      <section style={{ padding: "96px 0", borderTop: "1px solid var(--m-line)" }}>
+      <section className="py-16 md:py-20 lg:py-24" style={{ borderTop: "1px solid var(--m-line)" }}>
         <SectionHead
           kicker="Toolkit · Pragmatic, not religious"
           title={<>We pick tools that <em style={{ fontStyle: "italic" }}>your team</em> can keep using.</>}
           lead="No bespoke stacks for the sake of it. We use boring technology where boring is right."
         />
-        <div style={{ margin: "0 56px", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0, borderTop: "1px solid var(--m-line)", borderBottom: "1px solid var(--m-line)" }}>
+        <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-2 lg:grid-cols-4" style={{ borderTop: "1px solid var(--m-line)", borderLeft: "1px solid var(--m-line)" }}>
           {TOOLKIT.map((t, i) => (
-            <div key={t.cat} style={{ padding: "32px 24px", borderRight: i < 3 ? "1px solid var(--m-line)" : "none" }}>
+            <div key={t.cat} style={{ padding: "32px 24px", borderRight: "1px solid var(--m-line)", borderBottom: "1px solid var(--m-line)" }}>
               <span className="m-eyebrow">{t.cat}</span>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, marginTop: 14, display: "flex", flexDirection: "column", gap: 10 }}>
                 {t.items.map((it) => (
@@ -363,14 +361,14 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* Ethos */}
-      <section style={{ background: "var(--m-ink)", color: "var(--m-bg)", padding: "96px 0", borderTop: "1px solid var(--m-line-strong)" }}>
+      <section className="py-16 md:py-20 lg:py-24" style={{ background: "var(--m-ink)", color: "var(--m-bg)", borderTop: "1px solid var(--m-line-strong)" }}>
         <SectionHead
           dark
           kicker="Ethos · Two columns"
           title={<>What we <em style={{ fontStyle: "italic", color: "var(--m-accent)" }}>do</em>. What we <em style={{ fontStyle: "italic" }}>won&rsquo;t.</em></>}
           lead="Written down so we hold ourselves to it — and so you can decide quickly whether we're your kind of studio."
         />
-        <div style={{ margin: "0 56px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
+        <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-1 md:grid-cols-2 gap-8">
           <EthosColumn label="We do" rows={YES} positive />
           <EthosColumn label="We won't" rows={NO} />
         </div>

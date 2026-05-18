@@ -22,9 +22,9 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 export default function PrivacyPage() {
   return (
     <SiteFrame>
-      <div style={{ maxWidth: 760, margin: "0 auto", padding: "84px 56px 120px" }}>
+      <div className="px-5 py-12 md:px-8 md:py-16 lg:px-14 lg:pt-21 lg:pb-28" style={{ maxWidth: 760, margin: "0 auto" }}>
         <span className="m-eyebrow">Legal · Privacy</span>
-        <h1 className="m-display" style={{ fontSize: 64, letterSpacing: "-0.035em", lineHeight: 0.95, marginTop: 18 }}>
+        <h1 className="m-display text-[28px] sm:text-[36px] md:text-[44px] lg:text-[56px]" style={{ letterSpacing: "-0.035em", lineHeight: 0.95, marginTop: 18 }}>
           Privacy Policy
         </h1>
         <p style={{ marginTop: 20, fontSize: 15, color: "var(--m-ink-3)" }}>

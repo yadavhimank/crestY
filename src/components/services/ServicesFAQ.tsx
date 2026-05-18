@@ -17,14 +17,14 @@ const QS: [string, string][] = [
 export function ServicesFAQ() {
   const [open, setOpen] = useState(0);
   return (
-    <section style={{ padding: "96px 0", borderTop: "1px solid var(--m-line)" }}>
+    <section className="py-16 md:py-20 lg:py-24" style={{ borderTop: "1px solid var(--m-line)" }}>
       <SectionHead
         kicker="FAQ · Common questions"
         title={<>The questions we hear <em style={{ fontStyle: "italic" }}>most.</em></>}
         lead="If yours isn't here, send it over — short questions get short answers."
         action={<Link href="/contact" className="m-btn m-btn-bare">Ask a question <Icon name="arrowRight" size={13} /></Link>}
       />
-      <div style={{ margin: "0 56px", borderTop: "1px solid var(--m-line-strong)" }}>
+      <div className="mx-5 md:mx-8 lg:mx-14" style={{ borderTop: "1px solid var(--m-line-strong)" }}>
         {QS.map(([q, a], i) => (
           <div key={i} style={{ borderBottom: "1px solid var(--m-line)" }}>
             <button

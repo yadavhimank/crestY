@@ -12,7 +12,7 @@ const PHASES: [string, IconName, string, string][] = [
 
 export function HomeMethodSplit() {
   return (
-    <section style={{ background: "var(--m-ink)", color: "var(--m-bg)", padding: "96px 0", borderTop: "1px solid var(--m-line-strong)" }}>
+    <section className="py-16 md:py-20 lg:py-24" style={{ background: "var(--m-ink)", color: "var(--m-bg)", borderTop: "1px solid var(--m-line-strong)" }}>
       <SectionHead
         dark
         kicker="The method · 4 phases"
@@ -25,16 +25,17 @@ export function HomeMethodSplit() {
         }
       />
 
-      <div style={{
-        margin: "0 56px", position: "relative",
-        display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0,
+      <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-2 lg:grid-cols-4" style={{
+        position: "relative",
         borderTop: "1px solid rgba(255,255,255,0.18)",
+        borderLeft: "1px solid rgba(255,255,255,0.18)",
       }}>
         <div style={{ position: "absolute", left: 0, right: 0, top: 28, height: 1, background: "rgba(255,255,255,0.18)" }} />
         {PHASES.map(([n, ic, t, d], i) => (
           <div key={n} style={{
             padding: "44px 24px 28px",
-            borderRight: i < 3 ? "1px solid rgba(255,255,255,0.12)" : "none",
+            borderRight: "1px solid rgba(255,255,255,0.12)",
+            borderBottom: "1px solid rgba(255,255,255,0.12)",
             position: "relative",
           }}>
             <span style={{

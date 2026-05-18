@@ -36,13 +36,13 @@ function ComboRow({ ic, label, desc, accent }: { ic: IconName; label: string; de
 
 export function ServicesStack() {
   return (
-    <section style={{ background: "var(--m-bg-sunken)", padding: "96px 0", borderTop: "1px solid var(--m-line)" }}>
+    <section className="py-16 md:py-20 lg:py-24" style={{ background: "var(--m-bg-sunken)", borderTop: "1px solid var(--m-line)" }}>
       <SectionHead
         kicker="The stack · How disciplines combine"
         title={<>Each can be hired alone. <em style={{ fontStyle: "italic", color: "var(--m-accent)" }}>Together</em> they compound.</>}
         lead="Most engagements run 01 → 02 → 03 in sequence. We don't stack them by default — we stack them when the business case is there."
       />
-      <div style={{ margin: "0 56px", display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 56, alignItems: "center" }}>
+      <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-14 items-center">
         <div style={{ border: "1px solid var(--m-line)", background: "var(--m-bg-raised)", padding: 32, position: "relative" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
             <StackLayer ic="orbit"    label="03 · Automation & AI"  sub="Agents, pipelines, voice — wired into the system below." active />

@@ -99,6 +99,8 @@
 
 /* ─── Behaviour ──────────────────────────────────────────── */
 html { scroll-behavior: smooth; }
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
 
 /* ─── Type ───────────────────────────────────────────────── */
 :root {
@@ -290,4 +292,14 @@ html { scroll-behavior: smooth; }
 
 @media (prefers-reduced-motion: reduce) {
   .m-flow-line, .m-flow-pulse { animation: none; }
+}
+
+/* ─── TweaksPanel bottom-sheet slide-up ─────────────────────── */
+@keyframes tweaks-sheet-up {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @keyframes tweaks-sheet-up { from { transform: none; } to { transform: none; } }
 }

@@ -68,9 +68,7 @@ export function ServicesEditorialRows() {
 
 function ServiceRow({ s, isLast }: { s: ServiceData; isLast: boolean }) {
   return (
-    <article style={{
-      display: "grid", gridTemplateColumns: "80px 1.05fr 0.95fr 280px",
-      gap: 40, padding: "56px 56px",
+    <article className="grid grid-cols-1 lg:grid-cols-[80px_1.05fr_0.95fr_280px] gap-8 lg:gap-10 px-5 py-12 md:px-8 md:py-14 lg:px-14 lg:py-14" style={{
       borderBottom: isLast ? "none" : "1px solid var(--m-line)",
       alignItems: "start", position: "relative",
     }}>
@@ -80,9 +78,9 @@ function ServiceRow({ s, isLast }: { s: ServiceData; isLast: boolean }) {
       <div>
         <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 18 }}>
           <Icon name={s.icon} size={32} />
-          <h2 className="m-display" style={{ fontSize: 44, letterSpacing: "-0.025em", lineHeight: 1 }}>{s.title}</h2>
+          <h2 className="m-display text-2xl md:text-3xl lg:text-4xl xl:text-[44px]" style={{ letterSpacing: "-0.025em", lineHeight: 1 }}>{s.title}</h2>
         </div>
-        <p style={{ fontSize: 19, maxWidth: 420, lineHeight: 1.4, color: "var(--m-ink)", fontStyle: "italic", fontFamily: "var(--m-display)" }}>
+        <p className="text-[15px] lg:text-[19px]" style={{ maxWidth: 420, lineHeight: 1.4, color: "var(--m-ink)", fontStyle: "italic", fontFamily: "var(--m-display)" }}>
           {s.lead}
         </p>
         <div style={{ marginTop: 24, display: "flex", flexWrap: "wrap", gap: 8 }}>

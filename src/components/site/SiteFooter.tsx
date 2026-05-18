@@ -38,13 +38,12 @@ function FooterCol({ label, items }: { label: string; items: FooterItem[] }) {
 
 export function SiteFooter() {
   return (
-    <footer style={{
+    <footer className="px-5 pt-14 pb-7 md:px-8 lg:px-14" style={{
       borderTop: "1px solid var(--m-line-strong)",
       background: "var(--m-bg-sunken)",
-      padding: "56px 56px 28px",
       color: "var(--m-ink)",
     }}>
-      <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", gap: 48, marginBottom: 56 }}>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12 mb-14">
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
             <Icon name="mark" size={24} />

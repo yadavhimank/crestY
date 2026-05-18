@@ -16,12 +16,11 @@ export function CTAStrip({
   primary = "Start a conversation",
 }: CTAStripProps) {
   return (
-    <section style={{
+    <section className="px-5 py-12 md:px-8 md:py-16 lg:px-14 lg:py-20" style={{
       borderTop: "1px solid var(--m-line-strong)",
       borderBottom: "1px solid var(--m-line-strong)",
       background: "var(--m-ink)",
       color: "var(--m-bg)",
-      padding: "80px 56px",
       position: "relative",
       overflow: "hidden",
     }}>
@@ -36,19 +35,19 @@ export function CTAStrip({
         ))}
       </svg>
 
-      <div style={{ position: "relative", display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 64, alignItems: "end" }}>
+      <div className="relative grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-16 items-end">
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
             <span style={{ width: 8, height: 8, borderRadius: 999, background: "var(--m-accent)" }} className="m-flow-pulse" />
             <span className="m-mono" style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", letterSpacing: "0.18em", textTransform: "uppercase" }}>{eyebrow}</span>
           </div>
-          <h2 className="m-display" style={{ fontSize: 80, lineHeight: 0.95, letterSpacing: "-0.035em" }}>
+          <h2 className="m-display text-[36px] sm:text-[52px] md:text-[64px] lg:text-[80px]" style={{ lineHeight: 0.95, letterSpacing: "-0.035em" }}>
             {heading}
           </h2>
         </div>
         <div style={{ paddingBottom: 8 }}>
           {body && (
-            <p style={{ fontSize: 17, color: "rgba(255,255,255,0.7)", lineHeight: 1.55, marginBottom: 24, maxWidth: 380 }}>{body}</p>
+            <p className="text-[15px] lg:text-[17px]" style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.55, marginBottom: 24, maxWidth: 380 }}>{body}</p>
           )}
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <Link

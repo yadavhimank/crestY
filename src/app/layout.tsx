@@ -87,31 +87,32 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              {
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                name: "Mettle",
-                url: BASE,
-                logo: `${BASE}/icon`,
-                address: {
-                  "@type": "PostalAddress",
-                  addressLocality: "Singapore",
-                  addressCountry: "SG",
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  name: "Mettle",
+                  url: BASE,
+                  logo: `${BASE}/icon`,
+                  address: {
+                    "@type": "PostalAddress",
+                    addressLocality: "Singapore",
+                    addressCountry: "SG",
+                  },
                 },
-              },
-              {
-                "@context": "https://schema.org",
-                "@type": "WebSite",
-                name: "Mettle",
-                url: BASE,
-                potentialAction: {
-                  "@type": "SearchAction",
-                  target: { "@type": "EntryPoint", urlTemplate: `${BASE}/work?q={search_term_string}` },
-                  "query-input": "required name=search_term_string",
+                {
+                  "@type": "WebSite",
+                  name: "Mettle",
+                  url: BASE,
+                  potentialAction: {
+                    "@type": "SearchAction",
+                    target: { "@type": "EntryPoint", urlTemplate: `${BASE}/work?q={search_term_string}` },
+                    "query-input": "required name=search_term_string",
+                  },
                 },
-              },
-            ]),
+              ],
+            }),
           }}
         />
         <TweaksProvider>

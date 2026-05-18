@@ -4,14 +4,14 @@ import { SectionHead } from "@/components/site/SectionHead";
 
 export function WorkSelected() {
   return (
-    <section style={{ background: "var(--m-bg-sunken)", padding: "96px 0", borderTop: "1px solid var(--m-line)" }}>
+    <section className="py-16 md:py-20 lg:py-24" style={{ background: "var(--m-bg-sunken)", borderTop: "1px solid var(--m-line)" }}>
       <SectionHead
         kicker="Selected · K2 Renewals · 2024"
         title={<>Five tools, <em style={{ fontStyle: "italic", color: "var(--m-accent)" }}>one</em> operating system.</>}
         lead="A deeper read on the K2 engagement — what we found, what we changed, what the team runs now."
         action={<button className="m-btn m-btn-bare">Read the case <Icon name="arrowRight" size={13} /></button>}
       />
-      <div style={{ margin: "0 56px", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56 }}>
+      <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-14">
         <div style={{ border: "1px solid var(--m-line)", background: "var(--m-bg-raised)", overflow: "hidden" }}>
           <div style={{ padding: "14px 18px", borderBottom: "1px solid var(--m-line)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <span className="m-mono" style={{ fontSize: 11, color: "var(--m-ink-4)", letterSpacing: "0.08em" }}>BEFORE → AFTER · OPERATING MAP</span>
@@ -51,7 +51,7 @@ export function WorkSelected() {
             <span className="m-tag">Workflow</span>
             <span className="m-tag">Live · 18 months</span>
           </div>
-          <h3 className="m-display" style={{ fontSize: 42, letterSpacing: "-0.025em", lineHeight: 1 }}>
+          <h3 className="m-display text-2xl md:text-3xl lg:text-4xl xl:text-[44px]" style={{ letterSpacing: "-0.025em", lineHeight: 1 }}>
             The team didn&apos;t need a new tool. They needed the right boundaries between the ones they had.
           </h3>
           <p style={{ marginTop: 20, fontSize: 16, color: "var(--m-ink-2)", lineHeight: 1.65 }}>
@@ -59,7 +59,7 @@ export function WorkSelected() {
             with 17 handoffs between a lead landing and a signed contract. The Mettle engagement collapsed all of it into a
             single operating system the team designed alongside us.
           </p>
-          <div style={{ marginTop: 32, display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24, padding: "24px 0", borderTop: "1px solid var(--m-line)", borderBottom: "1px solid var(--m-line)" }}>
+          <div className="grid grid-cols-2 gap-6 mt-8" style={{ padding: "24px 0", borderTop: "1px solid var(--m-line)", borderBottom: "1px solid var(--m-line)" }}>
             {([
               ["compass",  "Phase 01 · Diagnostic", "2 weeks"],
               ["brackets", "Phase 02 · Build",      "11 weeks"],
@@ -75,14 +75,14 @@ export function WorkSelected() {
               </div>
             ))}
           </div>
-          <div style={{ marginTop: 24, display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24 }}>
+          <div className="grid grid-cols-3 gap-6 mt-6">
             {([
               ["+70hrs","saved / week"],
               ["5 → 1","operating systems"],
               ["17 → 5","handoffs"],
             ] as [string, string][]).map(([n, l]) => (
               <div key={l}>
-                <div className="m-display" style={{ fontSize: 38, letterSpacing: "-0.03em" }}>{n}</div>
+                <div className="m-display text-xl md:text-2xl lg:text-3xl" style={{ letterSpacing: "-0.03em" }}>{n}</div>
                 <div className="m-mono" style={{ fontSize: 10, color: "var(--m-ink-3)", letterSpacing: "0.06em", textTransform: "uppercase", marginTop: 4 }}>{l}</div>
               </div>
             ))}

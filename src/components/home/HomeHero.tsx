@@ -14,24 +14,24 @@ const PARTNERS: [string, IconName][] = [
 
 export function HomeHero() {
   return (
-    <section style={{ position: "relative", padding: "84px 56px 72px" }}>
+    <section className="px-5 py-12 md:px-8 md:py-16 lg:px-14 lg:py-20" style={{ position: "relative" }}>
       <HeroBackdrop />
 
-      <div style={{ position: "relative", display: "grid", gridTemplateColumns: "1.15fr 0.85fr", gap: 64, alignItems: "center" }}>
+      <div className="relative grid grid-cols-1 md:grid-cols-[1.15fr_0.85fr] gap-8 md:gap-16 items-center">
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 28 }}>
             <span style={{ width: 8, height: 8, borderRadius: 999, background: "var(--m-accent)" }} className="m-flow-pulse" />
             <span className="m-eyebrow">Systems consulting · Est. 2023</span>
           </div>
 
-          <h1 className="m-display" style={{ fontSize: 124, lineHeight: 0.86, letterSpacing: "-0.045em", marginBottom: 28 }}>
+          <h1 className="m-display text-[44px] sm:text-[64px] md:text-[88px] lg:text-[108px] xl:text-[124px]" style={{ lineHeight: 0.86, letterSpacing: "-0.045em", marginBottom: 28 }}>
             We design<br />
             and automate<br />
             <em style={{ fontStyle: "italic", color: "var(--m-accent)" }}>how</em> your<br />
             business <em style={{ fontStyle: "italic" }}>runs.</em>
           </h1>
 
-          <p style={{ fontSize: 19, color: "var(--m-ink-2)", maxWidth: 480, lineHeight: 1.55, marginBottom: 32 }}>
+          <p className="text-[15px] lg:text-[19px]" style={{ color: "var(--m-ink-2)", maxWidth: 480, lineHeight: 1.55, marginBottom: 32 }}>
             From messy workflows to fully automated systems — we help businesses
             run faster, cleaner, and more efficiently. Three disciplines, one operating method.
           </p>
@@ -47,7 +47,7 @@ export function HomeHero() {
           </div>
         </div>
 
-        <HeroSchematic />
+        <div className="hidden md:block"><HeroSchematic /></div>
       </div>
 
       <div style={{ marginTop: 72, paddingTop: 28, borderTop: "1px solid var(--m-line)", display: "flex", alignItems: "center", gap: 32, flexWrap: "wrap" }}>
