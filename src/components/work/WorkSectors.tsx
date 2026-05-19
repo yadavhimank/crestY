@@ -5,10 +5,10 @@ import { SectionHead } from "@/components/site/SectionHead";
 const SECTORS: [IconName, string][] = [
   ["compass",  "Renewable energy"],
   ["grid",     "E-commerce"],
-  ["shield",   "Healthcare"],
-  ["orbit",    "Pharma"],
-  ["cpu",      "B2B SaaS"],
-  ["document", "Legal · Professional services"],
+  ["shield",   "Pharmaceutical"],
+  ["cpu",      "Pharmacy"],
+  ["database", "IT services"],
+  ["spark",    "Consumer platform"],
 ];
 
 export function WorkSectors() {

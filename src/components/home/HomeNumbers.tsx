@@ -2,9 +2,9 @@ import { Icon } from "@/components/icons";
 import type { IconName } from "@/components/icons";
 
 const STATS: [string, string, IconName][] = [
-  ["+70hrs", "Saved / week · K2 Renewals",           "compass"],
+  ["+70hrs", "Saved / week · K2 CRM",                "compass"],
   ["3.2×",   "Order throughput · Barnshenn",          "grid"],
-  ["94%",    "Auto-resolved calls · Solivia",         "orbit"],
+  ["94%",    "Auto-resolved calls · Mirexa",          "orbit"],
   ["6",      "Live operating systems · 4 industries", "database"],
 ];
 

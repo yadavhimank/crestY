@@ -4,12 +4,12 @@ import type { IconName } from "@/components/icons";
 import { HeroBackdrop } from "@/components/site/HeroBackdrop";
 
 const PARTNERS: [string, IconName][] = [
-  ["K2 Renewals",    "compass"],
-  ["Barnshenn",      "grid"],
-  ["Solivia Pharma", "shield"],
-  ["Northbound SaaS","cpu"],
-  ["Halcyon Care",   "team"],
-  ["Mercer & Pine",  "document"],
+  ["K2 CRM",      "compass"],
+  ["Barnshenn",   "grid"],
+  ["Mirexa",      "shield"],
+  ["The Medcare", "cpu"],
+  ["MyCleanOne",  "team"],
+  ["Bichance",    "document"],
 ];
 
 export function HomeHero() {

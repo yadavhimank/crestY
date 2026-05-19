@@ -3,10 +3,10 @@ import type { IconName } from "@/components/icons";
 import { SectionHead } from "@/components/site/SectionHead";
 
 const PRINCIPLES: [IconName, string, string][] = [
-  ["spark",   "Operate, then automate", "We don't automate broken processes. We map, simplify, then write code."],
-  ["beam",    "Software that fits",     "Internal tools sized for the business that uses them — not the one that funded a SaaS."],
-  ["network", "Reversible decisions",   "Every module is testable, deployable, and removable. The system gets stronger as it grows."],
-  ["team",    "Operators in the room",  "The people who'll run the system after we leave help build it while we're there."],
+  ["spark",   "Process first, AI second",     "Adding AI to a broken process just makes mistakes happen faster. We fix the logic before applying any technology."],
+  ["beam",    "Systems over decks",           "No strategy PDFs. Production-grade code, custom tools, and automation pipelines that live in the business and drive real output."],
+  ["network", "Execution is the strategy",   "Most consulting fails in the gap between advice and action. We bridge that gap by owning the implementation."],
+  ["team",    "Technology as leverage",       "Tools are chosen because they provide the best leverage for your constraints — not because they're trending."],
 ];
 
 export function HomePrinciples() {

@@ -21,28 +21,26 @@ export const metadata: Metadata = {
 };
 
 const TEAM = [
-  { name: "Avery Khoo",    role: "Partner · Systems",     initials: "AK", bio: "Ex-operations at a Series C marketplace. Maps before code.", icon: "compass" as IconName },
-  { name: "Devansh Mehta", role: "Partner · Engineering", initials: "DM", bio: "Built CRMs and ops platforms for B2B teams since 2014.",     icon: "brackets" as IconName },
-  { name: "Lin Suo",       role: "Lead · Automation",     initials: "LS", bio: "Voice & language agents in pharma and customer support.",     icon: "orbit" as IconName },
-  { name: "Naomi Tahir",   role: "Lead · Operations",     initials: "NT", bio: "Embeds with client teams. Owns handover and on-call.",        icon: "deploy" as IconName },
+  { name: "Himank Yadav",  role: "Co-founder · CEO",      initials: "HY", bio: "Deep experience in distributed systems, AI, and operational design. Founded Mettle to bridge the gap between strategy and working systems.", icon: "compass" as IconName },
+  { name: "Devansh Mehta", role: "Partner · Engineering", initials: "DM", bio: "Built CRMs and ops platforms for B2B teams since 2014.",                                                                                      icon: "brackets" as IconName },
+  { name: "Lin Suo",       role: "Lead · Automation",     initials: "LS", bio: "Voice & language agents in pharma and customer support.",                                                                                      icon: "orbit" as IconName },
+  { name: "Naomi Tahir",   role: "Lead · Operations",     initials: "NT", bio: "Embeds with client teams. Owns handover and on-call.",                                                                                         icon: "deploy" as IconName },
 ];
 
 const VALUES: [IconName, string, string][] = [
-  ["spark",   "Quiet over loud",       "Real systems are unglamorous. We'd rather ship something that hums than something that shines."],
-  ["network", "Long over wide",        "We work with fewer clients, longer. A studio of five can't run twenty engagements — and shouldn't pretend."],
-  ["beam",    "Honest over polished",  "The diagnostic tells you what's broken, even if that means we get hired for less. We'd rather be right."],
-  ["team",    "Operators over architects", "We build alongside the team that will own the system. They're in the room from day one, not month six."],
+  ["spark",   "Process first, AI second",    "Adding AI to a broken process just makes mistakes happen faster. Mettle audits business workflows to fix the logic before applying any technology."],
+  ["network", "Systems over decks",          "No strategy PDFs. Instead: production-grade code, custom CRMs, and automation pipelines that live in the business and drive real output."],
+  ["beam",    "Execution is the strategy",   "Most consulting fails because of the gap between advice and action. Mettle bridges that gap by owning the implementation from architecture to iteration."],
+  ["team",    "Technology as leverage",      "Tools are chosen because they provide the best leverage for your business constraints — not because they're trending."],
 ];
 
 const CLIENTS: [string, IconName][] = [
-  ["K2 Renewals",     "compass"],
-  ["Barnshenn",       "grid"],
-  ["Solivia Pharma",  "shield"],
-  ["Northbound SaaS", "cpu"],
-  ["Halcyon Care",    "shield"],
-  ["Mercer & Pine",   "document"],
-  ["Stellate Studio", "spark"],
-  ["Field Bureau",    "globe"],
+  ["K2 CRM",      "compass"],
+  ["Barnshenn",   "grid"],
+  ["Mirexa",      "shield"],
+  ["The Medcare", "cpu"],
+  ["MyCleanOne",  "database"],
+  ["Bichance",    "spark"],
 ];
 
 const ROLES = [

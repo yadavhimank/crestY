@@ -4,10 +4,10 @@ import type { IconName } from "@/components/icons";
 import { SectionHead } from "@/components/site/SectionHead";
 
 const PHASES: [string, IconName, string, string][] = [
-  ["01", "observe",  "Observe",  "Map how work actually moves through the business today."],
-  ["02", "simplify", "Simplify", "Strip the workflow to its load-bearing parts."],
-  ["03", "build",    "Build",    "Ship the system in focused, reversible modules."],
-  ["04", "deploy",   "Deploy",   "Launch with the team in the room — refine in the open."],
+  ["01", "observe",  "Understand", "Audit broken systems. Map fragmented workflows, hidden dependencies, and ownership gaps before any recommendation is made."],
+  ["02", "simplify", "Redesign",   "Engineer a clear operating model. Restructure process flow, define system boundaries, and align data contracts."],
+  ["03", "build",    "Build",      "Ship modular infrastructure. Implement production-grade systems, connect APIs, and automate repetitive operations."],
+  ["04", "deploy",   "Optimize",   "Stabilize and compound clarity. Monitor performance, tune automation loops, and refine as the business scales."],
 ];
 
 export function HomeMethodSplit() {

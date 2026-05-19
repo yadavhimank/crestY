@@ -18,9 +18,9 @@ interface WorkCase {
 
 const WORK_CASES: WorkCase[] = [
   {
-    id: "k2", n: "01", title: "K2 Renewals", sector: "Renewable energy", region: "Scotland · UK", year: "2024",
+    id: "k2", n: "01", title: "K2 CRM", sector: "Renewable energy", region: "Scotland · UK", year: "2024",
     icon: "compass", disciplines: ["System design", "Custom software"],
-    summary: "A 5-tool sales stack collapsed into one operating system tuned to how the team actually closes.",
+    summary: "A 5-tool sales stack collapsed into one CRM tuned to how the team actually closes.",
     metric: ["+70hrs", "saved / week"], cover: "k2",
   },
   {
@@ -30,28 +30,28 @@ const WORK_CASES: WorkCase[] = [
     metric: ["3.2×", "throughput"], cover: "barn",
   },
   {
-    id: "solivia", n: "03", title: "Solivia Pharma", sector: "Pharma · Voice agent", region: "Mumbai · IN", year: "2025",
+    id: "mirexa", n: "03", title: "Mirexa", sector: "Pharmaceutical", region: "Mumbai · IN", year: "2025",
     icon: "orbit", disciplines: ["Automation", "AI"],
-    summary: "Always-on voice agent handling refill coordination across 1,200 patients without escalation.",
-    metric: ["94%", "auto-resolved"], cover: "solivia",
+    summary: "Regulatory submission tracking rebuilt from a 400-row spreadsheet into a live compliance system.",
+    metric: ["0", "missed deadlines"], cover: "solivia",
   },
   {
-    id: "northbound", n: "04", title: "Northbound SaaS", sector: "B2B SaaS · License flow", region: "Toronto · CA", year: "2025",
+    id: "themedcare", n: "04", title: "The Medcare", sector: "Pharmacy", region: "Dubai · UAE", year: "2025",
     icon: "cpu", disciplines: ["System design", "Software"],
-    summary: "Rebuilt the trial-to-paid pipeline as a single state machine — replacing 3 stitched-together vendor tools.",
-    metric: ["+38%", "conversion"], cover: "north",
+    summary: "End-to-end pharmacy operations rebuilt around a single workflow engine — prescription to dispatch.",
+    metric: ["+38%", "fulfillment speed"], cover: "north",
   },
   {
-    id: "halcyon", n: "05", title: "Halcyon Care", sector: "Healthcare · Triage", region: "Singapore · SG", year: "2025",
-    icon: "shield", disciplines: ["Automation", "Data"],
-    summary: "Clinical triage assistant routing intake messages to the right specialist queue, with audit log.",
-    metric: ["-62%", "intake time"], cover: "halcyon",
+    id: "mycleanone", n: "05", title: "MyCleanOne", sector: "IT services", region: "London · UK", year: "2025",
+    icon: "shield", disciplines: ["Automation", "Operations"],
+    summary: "Ticket routing and client communication automated — cutting resolution time and eliminating manual follow-ups.",
+    metric: ["-62%", "resolution time"], cover: "halcyon",
   },
   {
-    id: "mercer", n: "06", title: "Mercer & Pine", sector: "Legal · Practice management", region: "London · UK", year: "2026",
+    id: "bichance", n: "06", title: "Bichance", sector: "Consumer platform", region: "Remote · Global", year: "2024",
     icon: "document", disciplines: ["System design"],
-    summary: "Written operating diagnostic and matter-management blueprint for a 14-partner litigation practice.",
-    metric: ["1 doc", "12 weeks runway"], cover: "mercer",
+    summary: "Marketplace operating model redesigned from the ground up — streamlining vendor onboarding and order workflows.",
+    metric: ["1 system", "3 tools replaced"], cover: "bichance",
   },
 ];
 

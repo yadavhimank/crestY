@@ -6,7 +6,7 @@ export function WorkSelected() {
   return (
     <section className="py-16 md:py-20 lg:py-24" style={{ background: "var(--m-bg-sunken)", borderTop: "1px solid var(--m-line)" }}>
       <SectionHead
-        kicker="Selected · K2 Renewals · 2024"
+        kicker="Selected · K2 CRM · 2024"
         title={<>Five tools, <em style={{ fontStyle: "italic", color: "var(--m-accent)" }}>one</em> operating system.</>}
         lead="A deeper read on the K2 engagement — what we found, what we changed, what the team runs now."
         action={<button className="m-btn m-btn-bare">Read the case <Icon name="arrowRight" size={13} /></button>}
