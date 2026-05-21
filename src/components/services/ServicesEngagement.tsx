@@ -1,3 +1,4 @@
+import type React from "react";
 import Link from "next/link";
 import { Icon } from "@/components/icons";
 import type { IconName } from "@/components/icons";
@@ -44,6 +45,7 @@ const TIERS: Tier[] = [
 function EngagementCard({ t }: { t: Tier }) {
   return (
     <article style={{
+      ...(t.featured ? { "--m-ink": "#0B0D10", "--m-bg": "#FBFAF7" } as React.CSSProperties : {}),
       border: "1px solid " + (t.featured ? "var(--m-ink)" : "var(--m-line)"),
       background: t.featured ? "var(--m-ink)" : "var(--m-bg-raised)",
       color: t.featured ? "var(--m-bg)" : "var(--m-ink)",

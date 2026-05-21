@@ -18,82 +18,243 @@ interface WorkCase {
 
 const WORK_CASES: WorkCase[] = [
   {
-    id: "k2", n: "01", title: "K2 CRM", sector: "Renewable energy", region: "Scotland · UK", year: "2024",
-    icon: "compass", disciplines: ["System design", "Custom software"],
-    summary: "A 5-tool sales stack collapsed into one CRM tuned to how the team actually closes.",
-    metric: ["+70hrs", "saved / week"], cover: "k2",
+    id: "k2",
+    n: "01",
+    title: "K2 CRM",
+    sector: "Renewable energy",
+    region: "Scotland · UK",
+    year: "2024",
+    icon: "compass",
+    disciplines: ["System design", "Custom software"],
+    summary:
+      "A 5-tool sales stack collapsed into one CRM tuned to how the team actually closes.",
+    metric: ["+70hrs", "saved / week"],
+    cover: "k2",
   },
   {
-    id: "barnshenn", n: "02", title: "Barnshenn", sector: "E-commerce", region: "London · UK", year: "2024",
-    icon: "grid", disciplines: ["Software", "Operations"],
-    summary: "Unified ops platform rebuilt around the team's real sales-to-fulfilment sequence.",
-    metric: ["3.2×", "throughput"], cover: "barn",
+    id: "barnshenn",
+    n: "02",
+    title: "Barnshenn",
+    sector: "E-commerce",
+    region: "London · UK",
+    year: "2024",
+    icon: "grid",
+    disciplines: ["Software", "Operations"],
+    summary:
+      "Unified ops platform rebuilt around the team's real sales-to-fulfilment sequence.",
+    metric: ["3.2×", "throughput"],
+    cover: "barn",
   },
   {
-    id: "mirexa", n: "03", title: "Mirexa", sector: "Pharmaceutical", region: "Mumbai · IN", year: "2025",
-    icon: "orbit", disciplines: ["Automation", "AI"],
-    summary: "Regulatory submission tracking rebuilt from a 400-row spreadsheet into a live compliance system.",
-    metric: ["0", "missed deadlines"], cover: "solivia",
+    id: "mirexa",
+    n: "03",
+    title: "Mirexa",
+    sector: "Pharmaceutical",
+    region: "Mumbai · IN",
+    year: "2025",
+    icon: "orbit",
+    disciplines: ["Automation", "AI"],
+    summary:
+      "Regulatory submission tracking rebuilt from a 400-row spreadsheet into a live compliance system.",
+    metric: ["0", "missed deadlines"],
+    cover: "Medcare",
   },
   {
-    id: "themedcare", n: "04", title: "The Medcare", sector: "Pharmacy", region: "Dubai · UAE", year: "2025",
-    icon: "cpu", disciplines: ["System design", "Software"],
-    summary: "End-to-end pharmacy operations rebuilt around a single workflow engine — prescription to dispatch.",
-    metric: ["+38%", "fulfillment speed"], cover: "north",
+    id: "themedcare",
+    n: "04",
+    title: "The Medcare",
+    sector: "Pharmacy",
+    region: "Dubai · UAE",
+    year: "2025",
+    icon: "cpu",
+    disciplines: ["System design", "Software"],
+    summary:
+      "End-to-end pharmacy operations rebuilt around a single workflow engine — prescription to dispatch.",
+    metric: ["+38%", "fulfillment speed"],
+    cover: "north",
   },
   {
-    id: "mycleanone", n: "05", title: "MyCleanOne", sector: "IT services", region: "London · UK", year: "2025",
-    icon: "shield", disciplines: ["Automation", "Operations"],
-    summary: "Ticket routing and client communication automated — cutting resolution time and eliminating manual follow-ups.",
-    metric: ["-62%", "resolution time"], cover: "halcyon",
+    id: "mycleanone",
+    n: "05",
+    title: "MyCleanOne",
+    sector: "IT services",
+    region: "London · UK",
+    year: "2025",
+    icon: "shield",
+    disciplines: ["Automation", "Operations"],
+    summary:
+      "Ticket routing and client communication automated — cutting resolution time and eliminating manual follow-ups.",
+    metric: ["-62%", "resolution time"],
+    cover: "halcyon",
   },
   {
-    id: "bichance", n: "06", title: "Bichance", sector: "Consumer platform", region: "Remote · Global", year: "2024",
-    icon: "document", disciplines: ["System design"],
-    summary: "Marketplace operating model redesigned from the ground up — streamlining vendor onboarding and order workflows.",
-    metric: ["1 system", "3 tools replaced"], cover: "bichance",
+    id: "bichance",
+    n: "06",
+    title: "Bichance",
+    sector: "Consumer platform",
+    region: "Remote · Global",
+    year: "2024",
+    icon: "document",
+    disciplines: ["System design"],
+    summary:
+      "Marketplace operating model redesigned from the ground up — streamlining vendor onboarding and order workflows.",
+    metric: ["1 system", "3 tools replaced"],
+    cover: "bichance",
   },
 ];
 
 function CaseCoverArt({ kind }: { kind: string }) {
   if (kind === "k2") {
     return (
-      <svg viewBox="0 0 320 220" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}>
+      <svg
+        viewBox="0 0 320 220"
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+        }}
+      >
         <g stroke="var(--m-accent)" strokeWidth="1.25" fill="none">
           <path d="M30 60 H 90 V 110 H 150 V 60 H 220 V 160 H 290" />
-          <path d="M30 130 H 70 V 180 H 200 V 130 H 250 V 180 H 290" className="m-flow-line" />
+          <path
+            d="M30 130 H 70 V 180 H 200 V 130 H 250 V 180 H 290"
+            className="m-flow-line"
+          />
         </g>
-        {([[30,60],[90,60],[90,110],[150,110],[150,60],[220,60],[220,160],[290,160],[30,130],[70,130],[70,180],[200,180],[200,130],[250,130],[250,180],[290,180]] as [number,number][]).map(([x,y],i)=>(
-          <rect key={i} x={x-3} y={y-3} width="6" height="6" stroke="var(--m-accent)" fill="var(--m-bg-raised)" strokeWidth="1.25" />
+        {(
+          [
+            [30, 60],
+            [90, 60],
+            [90, 110],
+            [150, 110],
+            [150, 60],
+            [220, 60],
+            [220, 160],
+            [290, 160],
+            [30, 130],
+            [70, 130],
+            [70, 180],
+            [200, 180],
+            [200, 130],
+            [250, 130],
+            [250, 180],
+            [290, 180],
+          ] as [number, number][]
+        ).map(([x, y], i) => (
+          <rect
+            key={i}
+            x={x - 3}
+            y={y - 3}
+            width="6"
+            height="6"
+            stroke="var(--m-accent)"
+            fill="var(--m-bg-raised)"
+            strokeWidth="1.25"
+          />
         ))}
       </svg>
     );
   }
   if (kind === "barn") {
     return (
-      <svg viewBox="0 0 320 220" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}>
+      <svg
+        viewBox="0 0 320 220"
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+        }}
+      >
         <g stroke="var(--m-accent)" strokeWidth="0.75" opacity="0.6">
-          {[40, 80, 120, 160].map(y => <line key={y} x1="30" y1={y} x2="290" y2={y} />)}
-          {[40, 90, 140, 190, 240, 290].map(x => <line key={x} x1={x} y1="40" x2={x} y2="180" />)}
+          {[40, 80, 120, 160].map((y) => (
+            <line key={y} x1="30" y1={y} x2="290" y2={y} />
+          ))}
+          {[40, 90, 140, 190, 240, 290].map((x) => (
+            <line key={x} x1={x} y1="40" x2={x} y2="180" />
+          ))}
         </g>
-        {([[90,40],[140,80],[190,120],[240,80],[290,160],[40,120],[40,160]] as [number,number][]).map(([x,y],i) => (
-          <rect key={i} x={x-6} y={y-6} width="12" height="12" stroke="var(--m-accent)" strokeWidth="1.25" fill="var(--m-bg-raised)" />
+        {(
+          [
+            [90, 40],
+            [140, 80],
+            [190, 120],
+            [240, 80],
+            [290, 160],
+            [40, 120],
+            [40, 160],
+          ] as [number, number][]
+        ).map(([x, y], i) => (
+          <rect
+            key={i}
+            x={x - 6}
+            y={y - 6}
+            width="12"
+            height="12"
+            stroke="var(--m-accent)"
+            strokeWidth="1.25"
+            fill="var(--m-bg-raised)"
+          />
         ))}
-        <rect x="284" y="154" width="12" height="12" stroke="var(--m-accent)" strokeWidth="1.5" fill="var(--m-accent)" />
+        <rect
+          x="284"
+          y="154"
+          width="12"
+          height="12"
+          stroke="var(--m-accent)"
+          strokeWidth="1.5"
+          fill="var(--m-accent)"
+        />
       </svg>
     );
   }
-  if (kind === "solivia") {
+  if (kind === "Medcare") {
     return (
-      <svg viewBox="0 0 320 220" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}>
+      <svg
+        viewBox="0 0 320 220"
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+        }}
+      >
         <g stroke="var(--m-accent)" strokeWidth="1" fill="none">
           <ellipse cx="160" cy="110" rx="120" ry="40" />
-          <ellipse cx="160" cy="110" rx="80" ry="60" transform="rotate(-25 160 110)" />
-          <ellipse cx="160" cy="110" rx="50" ry="80" transform="rotate(40 160 110)" />
+          <ellipse
+            cx="160"
+            cy="110"
+            rx="80"
+            ry="60"
+            transform="rotate(-25 160 110)"
+          />
+          <ellipse
+            cx="160"
+            cy="110"
+            rx="50"
+            ry="80"
+            transform="rotate(40 160 110)"
+          />
         </g>
         <circle cx="160" cy="110" r="10" fill="var(--m-accent)" />
-        <circle cx="160" cy="110" r="16" fill="none" stroke="var(--m-accent)" opacity="0.4" className="m-flow-pulse" />
-        {([[240,78],[84,146],[200,170],[110,68]] as [number,number][]).map(([x,y],i)=>(
+        <circle
+          cx="160"
+          cy="110"
+          r="16"
+          fill="none"
+          stroke="var(--m-accent)"
+          opacity="0.4"
+          className="m-flow-pulse"
+        />
+        {(
+          [
+            [240, 78],
+            [84, 146],
+            [200, 170],
+            [110, 68],
+          ] as [number, number][]
+        ).map(([x, y], i) => (
           <circle key={i} cx={x} cy={y} r="3" fill="var(--m-accent)" />
         ))}
       </svg>
@@ -101,7 +262,15 @@ function CaseCoverArt({ kind }: { kind: string }) {
   }
   if (kind === "north") {
     return (
-      <svg viewBox="0 0 320 220" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}>
+      <svg
+        viewBox="0 0 320 220"
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+        }}
+      >
         <g stroke="var(--m-accent)" strokeWidth="1.25" fill="none">
           <rect x="30" y="70" width="50" height="50" />
           <rect x="120" y="70" width="50" height="50" />
@@ -109,21 +278,49 @@ function CaseCoverArt({ kind }: { kind: string }) {
           <line x1="80" y1="95" x2="120" y2="95" />
           <line x1="170" y1="95" x2="210" y2="95" />
         </g>
-        <g fontFamily="var(--m-mono)" fontSize="8" fill="currentColor" opacity="0.5" textAnchor="middle">
-          <text x="55" y="98">TRIAL</text>
-          <text x="145" y="98">ACTIVE</text>
-          <text x="235" y="98">PAID</text>
+        <g
+          fontFamily="var(--m-mono)"
+          fontSize="8"
+          fill="currentColor"
+          opacity="0.5"
+          textAnchor="middle"
+        >
+          <text x="55" y="98">
+            TRIAL
+          </text>
+          <text x="145" y="98">
+            ACTIVE
+          </text>
+          <text x="235" y="98">
+            PAID
+          </text>
         </g>
         <circle cx="55" cy="160" r="4" fill="var(--m-accent)" />
         <circle cx="145" cy="160" r="4" fill="var(--m-accent)" />
         <circle cx="235" cy="160" r="6" fill="var(--m-accent)" />
-        <circle cx="235" cy="160" r="12" fill="none" stroke="var(--m-accent)" opacity="0.4" className="m-flow-pulse" />
+        <circle
+          cx="235"
+          cy="160"
+          r="12"
+          fill="none"
+          stroke="var(--m-accent)"
+          opacity="0.4"
+          className="m-flow-pulse"
+        />
       </svg>
     );
   }
   if (kind === "halcyon") {
     return (
-      <svg viewBox="0 0 320 220" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}>
+      <svg
+        viewBox="0 0 320 220"
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+        }}
+      >
         <g stroke="var(--m-accent)" strokeWidth="1.25" fill="none">
           <circle cx="160" cy="60" r="6" />
           <line x1="160" y1="66" x2="160" y2="100" />
@@ -131,17 +328,44 @@ function CaseCoverArt({ kind }: { kind: string }) {
           <line x1="160" y1="100" x2="260" y2="160" />
           <line x1="160" y1="100" x2="160" y2="160" />
         </g>
-        {([[60,160],[160,160],[260,160]] as [number,number][]).map(([x,y],i)=>(
+        {(
+          [
+            [60, 160],
+            [160, 160],
+            [260, 160],
+          ] as [number, number][]
+        ).map(([x, y], i) => (
           <g key={i}>
-            <rect x={x-12} y={y-8} width="24" height="20" stroke="var(--m-accent)" fill="var(--m-bg-raised)" strokeWidth="1.25" />
-            <text x={x} y={y+5} fontFamily="var(--m-mono)" fontSize="8" textAnchor="middle" fill="currentColor" opacity="0.6">{(["GP","RX","ER"] as string[])[i]}</text>
+            <rect
+              x={x - 12}
+              y={y - 8}
+              width="24"
+              height="20"
+              stroke="var(--m-accent)"
+              fill="var(--m-bg-raised)"
+              strokeWidth="1.25"
+            />
+            <text
+              x={x}
+              y={y + 5}
+              fontFamily="var(--m-mono)"
+              fontSize="8"
+              textAnchor="middle"
+              fill="currentColor"
+              opacity="0.6"
+            >
+              {(["GP", "RX", "ER"] as string[])[i]}
+            </text>
           </g>
         ))}
       </svg>
     );
   }
   return (
-    <svg viewBox="0 0 320 220" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}>
+    <svg
+      viewBox="0 0 320 220"
+      style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
+    >
       <g stroke="var(--m-accent)" strokeWidth="1.25" fill="none">
         <path d="M100 40 H 200 L 220 60 V 180 H 100 Z" />
         <polyline points="200,40 200,60 220,60" />
@@ -155,15 +379,50 @@ function CaseCoverArt({ kind }: { kind: string }) {
   );
 }
 
-function CaseCover({ cover, icon, n }: { cover: string; icon: IconName; n: string }) {
+function CaseCover({
+  cover,
+  icon,
+  n,
+}: {
+  cover: string;
+  icon: IconName;
+  n: string;
+}) {
   return (
-    <div style={{ height: 220, position: "relative", borderBottom: "1px solid var(--m-line)", background: "var(--m-bg-sunken)", overflow: "hidden" }}>
-      <div className="m-grid-bg-fine" style={{ position: "absolute", inset: 0, opacity: 0.55 }} />
+    <div
+      style={{
+        height: 220,
+        position: "relative",
+        borderBottom: "1px solid var(--m-line)",
+        background: "var(--m-bg-sunken)",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        className="m-grid-bg-fine"
+        style={{ position: "absolute", inset: 0, opacity: 0.55 }}
+      />
       <CaseCoverArt kind={cover} />
       <div style={{ position: "absolute", top: 14, left: 14 }}>
-        <span className="m-mono" style={{ fontSize: 10, color: "var(--m-ink-4)", letterSpacing: "0.1em" }}>CASE · {n}</span>
+        <span
+          className="m-mono"
+          style={{
+            fontSize: 10,
+            color: "var(--m-ink-4)",
+            letterSpacing: "0.1em",
+          }}
+        >
+          CASE · {n}
+        </span>
       </div>
-      <div style={{ position: "absolute", top: 14, right: 14, color: "var(--m-ink-3)" }}>
+      <div
+        style={{
+          position: "absolute",
+          top: 14,
+          right: 14,
+          color: "var(--m-ink-3)",
+        }}
+      >
         <Icon name={icon} size={20} />
       </div>
     </div>
@@ -172,30 +431,119 @@ function CaseCover({ cover, icon, n }: { cover: string; icon: IconName; n: strin
 
 function CaseCard({ c }: { c: WorkCase }) {
   return (
-    <Link href="/work" style={{ textDecoration: "none", color: "inherit", display: "flex", flexDirection: "column" }}>
-      <article style={{
-        border: "1px solid var(--m-line)",
-        background: "var(--m-bg-raised)",
-        display: "flex", flexDirection: "column", flex: 1,
-        transition: "transform 240ms var(--ease-out-fine), border-color 140ms var(--ease-out-fine)",
-      }} className="hover:-translate-y-0.5 hover:border-m-ink">
+    <Link
+      href="/work"
+      style={{
+        textDecoration: "none",
+        color: "inherit",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <article
+        style={{
+          border: "1px solid var(--m-line)",
+          background: "var(--m-bg-raised)",
+          display: "flex",
+          flexDirection: "column",
+          flex: 1,
+          transition:
+            "transform 240ms var(--ease-out-fine), border-color 140ms var(--ease-out-fine)",
+        }}
+        className="hover:-translate-y-0.5 hover:border-m-ink"
+      >
         <CaseCover cover={c.cover} icon={c.icon} n={c.n} />
-        <div style={{ padding: 24, display: "flex", flexDirection: "column", gap: 12, flex: 1 }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <span className="m-mono" style={{ fontSize: 11, color: "var(--m-ink-4)", letterSpacing: "0.06em", textTransform: "uppercase" }}>{c.sector}</span>
-            <span className="m-mono" style={{ fontSize: 11, color: "var(--m-ink-4)" }}>{c.year}</span>
+        <div
+          style={{
+            padding: 24,
+            display: "flex",
+            flexDirection: "column",
+            gap: 12,
+            flex: 1,
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <span
+              className="m-mono"
+              style={{
+                fontSize: 11,
+                color: "var(--m-ink-4)",
+                letterSpacing: "0.06em",
+                textTransform: "uppercase",
+              }}
+            >
+              {c.sector}
+            </span>
+            <span
+              className="m-mono"
+              style={{ fontSize: 11, color: "var(--m-ink-4)" }}
+            >
+              {c.year}
+            </span>
           </div>
-          <h3 className="m-display" style={{ fontSize: 30, letterSpacing: "-0.02em", lineHeight: 1.05 }}>{c.title}</h3>
-          <p style={{ fontSize: 14, color: "var(--m-ink-2)", lineHeight: 1.55 }}>{c.summary}</p>
-          <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 4 }}>
-            {c.disciplines.map((d) => <span key={d} className="m-tag">{d}</span>)}
+          <h3
+            className="m-display"
+            style={{ fontSize: 30, letterSpacing: "-0.02em", lineHeight: 1.05 }}
+          >
+            {c.title}
+          </h3>
+          <p
+            style={{ fontSize: 14, color: "var(--m-ink-2)", lineHeight: 1.55 }}
+          >
+            {c.summary}
+          </p>
+          <div
+            style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 4 }}
+          >
+            {c.disciplines.map((d) => (
+              <span key={d} className="m-tag">
+                {d}
+              </span>
+            ))}
           </div>
-          <div style={{ marginTop: "auto", paddingTop: 18, borderTop: "1px solid var(--m-line)", display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+          <div
+            style={{
+              marginTop: "auto",
+              paddingTop: 18,
+              borderTop: "1px solid var(--m-line)",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "baseline",
+            }}
+          >
             <div>
-              <div className="m-display" style={{ fontSize: 28, letterSpacing: "-0.025em", lineHeight: 1 }}>{c.metric[0]}</div>
-              <div className="m-mono" style={{ fontSize: 10, color: "var(--m-ink-4)", letterSpacing: "0.06em", textTransform: "uppercase", marginTop: 2 }}>{c.metric[1]}</div>
+              <div
+                className="m-display"
+                style={{
+                  fontSize: 28,
+                  letterSpacing: "-0.025em",
+                  lineHeight: 1,
+                }}
+              >
+                {c.metric[0]}
+              </div>
+              <div
+                className="m-mono"
+                style={{
+                  fontSize: 10,
+                  color: "var(--m-ink-4)",
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                  marginTop: 2,
+                }}
+              >
+                {c.metric[1]}
+              </div>
             </div>
-            <span style={{ color: "var(--m-ink-3)" }}><Icon name="arrowUpRight" size={16} /></span>
+            <span style={{ color: "var(--m-ink-3)" }}>
+              <Icon name="arrowUpRight" size={16} />
+            </span>
           </div>
         </div>
       </article>
@@ -207,7 +555,9 @@ export function WorkIndex() {
   return (
     <section className="py-12 md:py-16 lg:py-20">
       <div className="mx-5 md:mx-8 lg:mx-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {WORK_CASES.map((c) => <CaseCard key={c.id} c={c} />)}
+        {WORK_CASES.map((c) => (
+          <CaseCard key={c.id} c={c} />
+        ))}
       </div>
     </section>
   );

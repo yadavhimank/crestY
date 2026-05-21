@@ -78,7 +78,7 @@ export function SiteFooter() {
 
       <div style={{ borderTop: "1px solid var(--m-line)", paddingTop: 20, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <span className="m-mono" style={{ fontSize: 11, color: "var(--m-ink-4)", letterSpacing: "0.06em" }}>
-          © 2023–2026 Mettle Operating Co · Singapore
+          © 2023–2026 Mettle Operating Co · Gurugram
         </span>
         <span className="m-mono" style={{ fontSize: 11, color: "var(--m-ink-4)", letterSpacing: "0.06em" }}>
           Built by hand · No template

@@ -1,10 +1,23 @@
-export function MInput({ label, placeholder }: { label: string; placeholder: string }) {
+interface MInputProps {
+  label: string;
+  placeholder: string;
+  value: string;
+  onChange: (v: string) => void;
+  type?: string;
+  required?: boolean;
+}
+
+export function MInput({ label, placeholder, value, onChange, type = "text", required }: MInputProps) {
   return (
     <label style={{ display: "block" }}>
       <div className="m-eyebrow" style={{ marginBottom: 6 }}>{label}</div>
       <div style={{ position: "relative" }}>
         <input
+          type={type}
           placeholder={placeholder}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          required={required}
           style={{
             width: "100%",
             background: "transparent",

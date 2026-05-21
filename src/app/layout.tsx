@@ -9,6 +9,7 @@ import {
 import "./globals.css";
 import { TweaksProvider } from "@/components/tweaks/TweaksProvider";
 import { TweaksPanel } from "@/components/tweaks/TweaksPanel";
+import { CustomCursor } from "@/components/site/CustomCursor";
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
@@ -80,7 +81,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-mettle-theme="light"
-      data-mettle-type="instrument"
+      data-mettle-type="newsreader"
       className={`${instrumentSerif.variable} ${newsreader.variable} ${dmSerifDisplay.variable} ${geist.variable} ${jetbrainsMono.variable}`}
     >
       <body className="bg-m-bg text-m-ink font-sans">
@@ -97,8 +98,8 @@ export default function RootLayout({
                   logo: `${BASE}/icon`,
                   address: {
                     "@type": "PostalAddress",
-                    addressLocality: "Singapore",
-                    addressCountry: "SG",
+                    addressLocality: "Gurugram",
+                    addressCountry: "IN",
                   },
                 },
                 {
@@ -118,6 +119,7 @@ export default function RootLayout({
         <TweaksProvider>
           {children}
           <TweaksPanel />
+          <CustomCursor />
         </TweaksProvider>
       </body>
     </html>

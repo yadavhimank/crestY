@@ -303,3 +303,8 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   @keyframes tweaks-sheet-up { from { transform: none; } to { transform: none; } }
 }
+
+/* ─── Custom cursor 2× size (desktop only) ──────────────── */
+@media (pointer: fine) {
+  *, *:hover { cursor: url('/cursor.svg') 4 2, auto !important; }
+}

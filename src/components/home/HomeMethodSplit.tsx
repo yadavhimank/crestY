@@ -1,3 +1,4 @@
+import type React from "react";
 import Link from "next/link";
 import { Icon } from "@/components/icons";
 import type { IconName } from "@/components/icons";
@@ -12,7 +13,7 @@ const PHASES: [string, IconName, string, string][] = [
 
 export function HomeMethodSplit() {
   return (
-    <section className="py-16 md:py-20 lg:py-24" style={{ background: "var(--m-ink)", color: "var(--m-bg)", borderTop: "1px solid var(--m-line-strong)" }}>
+    <section className="py-16 md:py-20 lg:py-24" style={{ "--m-ink": "#0B0D10", "--m-bg": "#FBFAF7", background: "var(--m-ink)", color: "var(--m-bg)", borderTop: "1px solid var(--m-line-strong)" } as React.CSSProperties}>
       <SectionHead
         dark
         kicker="The method · 4 phases"

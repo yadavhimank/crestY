@@ -5,6 +5,7 @@ import { HeroBackdrop } from "@/components/site/HeroBackdrop";
 import { SectionHead } from "@/components/site/SectionHead";
 import { Icon } from "@/components/icons";
 import type { IconName } from "@/components/icons";
+import type React from "react";
 
 export const metadata: Metadata = {
   title: "How We Work",
@@ -248,15 +249,15 @@ export default function HowWeWorkPage() {
       {/* Rail */}
       <section className="px-5 pb-8 md:px-8 lg:px-14" style={{ position: "relative" }}>
         <div style={{ position: "relative", borderTop: "1px solid var(--m-line-strong)", paddingTop: 32 }}>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {PHASES.map((p, i) => (
               <a key={p.n}
                 href={`#phase-${p.n}`}
                 style={{ position: "relative", display: "block", textDecoration: "none", color: "inherit", paddingTop: 16 }}
               >
-                <span style={{ position: "absolute", top: -36, left: 0, width: 10, height: 10, borderRadius: 999, background: "var(--m-ink)" }} />
+                <span className="hidden lg:block" style={{ position: "absolute", top: -36, left: 0, width: 10, height: 10, borderRadius: 999, background: "var(--m-ink)" }} />
                 {i === 1 && (
-                  <span style={{ position: "absolute", top: -42, left: -6, width: 22, height: 22, borderRadius: 999, border: "1px solid var(--m-accent)" }} className="m-flow-pulse" />
+                  <span className="m-flow-pulse hidden lg:block" style={{ position: "absolute", top: -42, left: -6, width: 22, height: 22, borderRadius: 999, border: "1px solid var(--m-accent)" }} />
                 )}
                 <div className="m-mono" style={{ fontSize: 11, color: "var(--m-ink-4)", letterSpacing: "0.1em" }}>PHASE {p.n}</div>
                 <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 8 }}>
@@ -361,7 +362,7 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* Ethos */}
-      <section className="py-16 md:py-20 lg:py-24" style={{ background: "var(--m-ink)", color: "var(--m-bg)", borderTop: "1px solid var(--m-line-strong)" }}>
+      <section className="py-16 md:py-20 lg:py-24" style={{ "--m-ink": "#0B0D10", "--m-bg": "#FBFAF7", background: "var(--m-ink)", color: "var(--m-bg)", borderTop: "1px solid var(--m-line-strong)" } as React.CSSProperties}>
         <SectionHead
           dark
           kicker="Ethos · Two columns"

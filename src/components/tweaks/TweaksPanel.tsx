@@ -173,7 +173,8 @@ export function TweaksPanel() {
       if (e.key === "Escape") setOpen(false);
     }
     function onOutside(e: MouseEvent) {
-      if (open && desktopRef.current && !desktopRef.current.contains(e.target as Node)) {
+      const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+      if (isDesktop && open && desktopRef.current && !desktopRef.current.contains(e.target as Node)) {
         setOpen(false);
       }
     }
@@ -203,7 +204,7 @@ export function TweaksPanel() {
       {/* ── Mobile: bottom sheet ── */}
       {open && (
         <div
-          className="md:hidden"
+          className="md:hidden flex flex-col"
           style={{
             position: "fixed", bottom: 0, left: 0, right: 0, zIndex: 9999,
             maxHeight: "80vh", overflowY: "auto",
@@ -211,7 +212,6 @@ export function TweaksPanel() {
             border: "1px solid var(--m-line-strong)",
             borderRadius: "12px 12px 0 0",
             boxShadow: "0 -8px 32px rgba(0,0,0,0.2)",
-            display: "flex", flexDirection: "column",
             animation: "tweaks-sheet-up 280ms cubic-bezier(0.25,0.46,0.45,0.94)",
           }}
         >

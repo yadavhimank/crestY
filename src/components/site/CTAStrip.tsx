@@ -1,3 +1,4 @@
+import type React from "react";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Icon } from "@/components/icons";
@@ -17,13 +18,15 @@ export function CTAStrip({
 }: CTAStripProps) {
   return (
     <section className="px-5 py-12 md:px-8 md:py-16 lg:px-14 lg:py-20" style={{
+      "--m-ink": "#0B0D10",
+      "--m-bg": "#FBFAF7",
       borderTop: "1px solid var(--m-line-strong)",
       borderBottom: "1px solid var(--m-line-strong)",
       background: "var(--m-ink)",
       color: "var(--m-bg)",
       position: "relative",
       overflow: "hidden",
-    }}>
+    } as React.CSSProperties}>
       {/* Decorative schematic */}
       <svg viewBox="0 0 1400 400" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", opacity: 0.18, pointerEvents: "none" }} aria-hidden="true">
         <g stroke="var(--m-accent)" strokeWidth="1" fill="none">
